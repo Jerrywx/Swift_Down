@@ -10,14 +10,19 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+	var isLogin = false
+	
+	override func loadView() {
+		isLogin ? super.viewDidLoad() : setupVisitorView()
+	}
+	
+	/**
+	创建未登陆界面
+	*/
+	private func setupVisitorView() {
+		let customView = UIView()
+		customView.backgroundColor = UIColor.redColor()
+		view = customView
+	}
+	
 }

@@ -12,7 +12,5 @@ class NullViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-		view.backgroundColor = UIColor.grayColor()
     }
 }
