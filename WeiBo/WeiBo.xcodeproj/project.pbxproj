@@ -17,6 +17,7 @@
 		C40DA2BA1CBA79FE00F33D06 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DA2B01CBA79FE00F33D06 /* MessageViewController.swift */; };
 		C40DA2BB1CBA79FE00F33D06 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DA2B21CBA79FE00F33D06 /* ProfileViewController.swift */; };
 		C40DA2BD1CBA7A3200F33D06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DA2BC1CBA7A3200F33D06 /* AppDelegate.swift */; };
+		C40DA2BF1CBA83FD00F33D06 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = C40DA2BE1CBA83FD00F33D06 /* MainVCSettings.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		C40DA2B21CBA79FE00F33D06 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C40DA2B51CBA79FE00F33D06 /* 开发笔记.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "开发笔记.h"; sourceTree = "<group>"; };
 		C40DA2BC1CBA7A3200F33D06 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C40DA2BE1CBA83FD00F33D06 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				C40DA2A51CBA79FE00F33D06 /* Classes */,
-				C40DA2B41CBA79FE00F33D06 /* Resources */,
+				C40DA2B41CBA79FE00F33D06 /* Resources(资源) */,
 			);
 			path = WeiBo;
 			sourceTree = "<group>";
@@ -132,87 +134,97 @@
 			isa = PBXGroup;
 			children = (
 				C40DA2BC1CBA7A3200F33D06 /* AppDelegate.swift */,
-				C40DA2A61CBA79FE00F33D06 /* Common */,
-				C40DA2A71CBA79FE00F33D06 /* Discover */,
-				C40DA2A91CBA79FE00F33D06 /* Extension */,
-				C40DA2AA1CBA79FE00F33D06 /* Home */,
-				C40DA2AC1CBA79FE00F33D06 /* Main */,
-				C40DA2AF1CBA79FE00F33D06 /* Message */,
-				C40DA2B11CBA79FE00F33D06 /* Profile */,
-				C40DA2B31CBA79FE00F33D06 /* Tools */,
+				C40DA2AC1CBA79FE00F33D06 /* Main(应用结构) */,
+				C40DA2AA1CBA79FE00F33D06 /* Home(首页) */,
+				C40DA2A71CBA79FE00F33D06 /* Discover(发现) */,
+				C40DA2AF1CBA79FE00F33D06 /* Message(消息) */,
+				C40DA2B11CBA79FE00F33D06 /* Profile(个人) */,
+				C40DA2A61CBA79FE00F33D06 /* Common(通用) */,
+				C40DA2A91CBA79FE00F33D06 /* Extension(拓展) */,
+				C40DA2B31CBA79FE00F33D06 /* Tools(工具) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		C40DA2A61CBA79FE00F33D06 /* Common */ = {
+		C40DA2A61CBA79FE00F33D06 /* Common(通用) */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = "Common(通用)";
 			path = Common;
 			sourceTree = "<group>";
 		};
-		C40DA2A71CBA79FE00F33D06 /* Discover */ = {
+		C40DA2A71CBA79FE00F33D06 /* Discover(发现) */ = {
 			isa = PBXGroup;
 			children = (
 				C40DA2A81CBA79FE00F33D06 /* DiscoverViewController.swift */,
 			);
+			name = "Discover(发现)";
 			path = Discover;
 			sourceTree = "<group>";
 		};
-		C40DA2A91CBA79FE00F33D06 /* Extension */ = {
+		C40DA2A91CBA79FE00F33D06 /* Extension(拓展) */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = "Extension(拓展)";
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		C40DA2AA1CBA79FE00F33D06 /* Home */ = {
+		C40DA2AA1CBA79FE00F33D06 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
 				C40DA2AB1CBA79FE00F33D06 /* HomeViewController.swift */,
 			);
+			name = "Home(首页)";
 			path = Home;
 			sourceTree = "<group>";
 		};
-		C40DA2AC1CBA79FE00F33D06 /* Main */ = {
+		C40DA2AC1CBA79FE00F33D06 /* Main(应用结构) */ = {
 			isa = PBXGroup;
 			children = (
 				C40DA2AD1CBA79FE00F33D06 /* BaseViewController.swift */,
 				C40DA2AE1CBA79FE00F33D06 /* MainViewController.swift */,
 			);
+			name = "Main(应用结构)";
 			path = Main;
 			sourceTree = "<group>";
 		};
-		C40DA2AF1CBA79FE00F33D06 /* Message */ = {
+		C40DA2AF1CBA79FE00F33D06 /* Message(消息) */ = {
 			isa = PBXGroup;
 			children = (
 				C40DA2B01CBA79FE00F33D06 /* MessageViewController.swift */,
 			);
+			name = "Message(消息)";
 			path = Message;
 			sourceTree = "<group>";
 		};
-		C40DA2B11CBA79FE00F33D06 /* Profile */ = {
+		C40DA2B11CBA79FE00F33D06 /* Profile(个人) */ = {
 			isa = PBXGroup;
 			children = (
 				C40DA2B21CBA79FE00F33D06 /* ProfileViewController.swift */,
 			);
+			name = "Profile(个人)";
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		C40DA2B31CBA79FE00F33D06 /* Tools */ = {
+		C40DA2B31CBA79FE00F33D06 /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = "Tools(工具)";
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		C40DA2B41CBA79FE00F33D06 /* Resources */ = {
+		C40DA2B41CBA79FE00F33D06 /* Resources(资源) */ = {
 			isa = PBXGroup;
 			children = (
+				C40DA2BE1CBA83FD00F33D06 /* MainVCSettings.json */,
 				C40DA27C1CBA774F00F33D06 /* Assets.xcassets */,
 				C40DA2811CBA774F00F33D06 /* Info.plist */,
 				C40DA2B51CBA79FE00F33D06 /* 开发笔记.h */,
 			);
+			name = "Resources(资源)";
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -320,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40DA2BF1CBA83FD00F33D06 /* MainVCSettings.json in Resources */,
 				C40DA27D1CBA774F00F33D06 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
