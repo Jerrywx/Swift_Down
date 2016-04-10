@@ -12,9 +12,18 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		/**
+		添加左右子控制器
+		*/
 		addChildViewControllers()
     }
 
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		// 初始化加号按钮
+		setupComposeBtn()
+	}
+	
 	private func addChildViewControllers() {
 		// 1. 读取配置文件
 		let jsonPath = NSBundle.mainBundle().pathForResource("MainVCSettings.json", ofType: nil)
@@ -30,6 +39,9 @@ class MainViewController: UITabBarController {
 		} catch {
 			addChildViewController("HomeViewController",	 title: "首页", imageName: "tabbar_home")
 			addChildViewController("MessageViewController",	 title: "消息", imageName: "tabbar_message_center")
+			
+			addChildViewController("NullViewController",	 title: "", imageName: "")
+			
 			addChildViewController("DiscoverViewController", title: "发现", imageName: "tabbar_discover")
 			addChildViewController("ProfileViewController",  title: "我",   imageName: "tabbar_profile")
 		}
@@ -63,7 +75,46 @@ class MainViewController: UITabBarController {
 		let childNav = UINavigationController(rootViewController: childVC)
 		addChildViewController(childNav)
 	}
+	
+	/**
+	设置加号按钮
+	*/
+	func setupComposeBtn() {
+		// 0. 添加加号按钮到 tabBar 上
+		tabBar.addSubview(composeBtn)
+		// 1. 计算加号按钮宽度
+		let width = tabBar.bounds.width / CGFloat(viewControllers!.count)
+		// 2. 创建按钮 frame
+		let frame = CGRect(x: 0, y: 0, width: width + 2, height: tabBar.bounds.height)
+		// 3. 设置按钮 frame 和 偏移位置
+		composeBtn.frame = CGRectOffset(frame, width * 2, 0)
+	}
+	
+	/**
+	监听加好按钮点击
+	注意: 运行循环监听到事件后, 向VC发送消息, 动态执行 方法，因此不能设置为 private
+	*/
+	func composeBtnClick() {
+		print(#function)
+	}
+	
+	// MARK: - 懒加载
+	private lazy var composeBtn: UIButton = {
+		// 1. 创建按钮
+		let button = UIButton()
+		// 2. 设置图片
+		button.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: UIControlState.Normal)
+		button.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: UIControlState.Selected)
+		button.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: UIControlState.Normal)
+		button.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: UIControlState.Selected)
+		// 3. 监听加好按钮点击
+		button.addTarget(self, action: #selector(MainViewController.composeBtnClick), forControlEvents: UIControlEvents.TouchUpInside)
+		// 4. 返回按钮
+		return button
+	}()
 }
+
+
 
 
 

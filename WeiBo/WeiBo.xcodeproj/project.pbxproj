@@ -18,6 +18,7 @@
 		C40DA2BB1CBA79FE00F33D06 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DA2B21CBA79FE00F33D06 /* ProfileViewController.swift */; };
 		C40DA2BD1CBA7A3200F33D06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DA2BC1CBA7A3200F33D06 /* AppDelegate.swift */; };
 		C40DA2BF1CBA83FD00F33D06 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = C40DA2BE1CBA83FD00F33D06 /* MainVCSettings.json */; };
+		C40DA2C31CBA955300F33D06 /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DA2C21CBA955300F33D06 /* NullViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C40DA2B51CBA79FE00F33D06 /* 开发笔记.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "开发笔记.h"; sourceTree = "<group>"; };
 		C40DA2BC1CBA7A3200F33D06 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C40DA2BE1CBA83FD00F33D06 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		C40DA2C21CBA955300F33D06 /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		C40DA2AC1CBA79FE00F33D06 /* Main(应用结构) */ = {
 			isa = PBXGroup;
 			children = (
+				C40DA2C21CBA955300F33D06 /* NullViewController.swift */,
 				C40DA2AD1CBA79FE00F33D06 /* BaseViewController.swift */,
 				C40DA2AE1CBA79FE00F33D06 /* MainViewController.swift */,
 			);
@@ -363,6 +366,7 @@
 				C40DA2B71CBA79FE00F33D06 /* HomeViewController.swift in Sources */,
 				C40DA2B81CBA79FE00F33D06 /* BaseViewController.swift in Sources */,
 				C40DA2BD1CBA7A3200F33D06 /* AppDelegate.swift in Sources */,
+				C40DA2C31CBA955300F33D06 /* NullViewController.swift in Sources */,
 				C40DA2B91CBA79FE00F33D06 /* MainViewController.swift in Sources */,
 				C40DA2BA1CBA79FE00F33D06 /* MessageViewController.swift in Sources */,
 			);
