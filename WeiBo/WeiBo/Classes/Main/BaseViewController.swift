@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, VisitorViewDelegate {
 
 	// 登录状态
 	var userLogin = false
@@ -24,7 +24,18 @@ class BaseViewController: UIViewController {
 	*/
 	private func setupVisitorView() {
 		let customView = VisitorView()
+		customView.delegate = self
 		view = customView
 		visitorView = customView
+	}
+	
+	// MARK: - VisitorViewDelegate
+	// 登录事件
+	func loginButtonDidClicked() {
+		print(#function)
+	}
+	// 注册事件
+	func registerButtonDidClicked() {
+		print(#function)
 	}
 }

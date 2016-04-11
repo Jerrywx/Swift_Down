@@ -8,7 +8,18 @@
 
 import UIKit
 
+
+protocol VisitorViewDelegate: NSObjectProtocol {
+	// 登录回调
+	func loginButtonDidClicked()
+	// 注册回调
+	func registerButtonDidClicked()
+}
+
 class VisitorView: UIView {
+	
+	// 代理对象  weak 方式循环引用
+	weak var delegate:VisitorViewDelegate?
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -19,7 +30,6 @@ class VisitorView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	
 	
 	/**
 	根据频道选择相对的视图
@@ -86,6 +96,15 @@ class VisitorView: UIView {
 		
 	}
 
+	// MARK：- 按钮点击事件
+	func registerButtonClicked() {
+		delegate?.registerButtonDidClicked()
+	}
+	
+	func loginButtonClicked() {
+		delegate?.loginButtonDidClicked()
+	}
+	
 	// MARK: - 懒加载
 	/// 背景图标
 	private lazy var iconView: UIImageView = {
@@ -118,6 +137,7 @@ class VisitorView: UIView {
 		button.setTitle("注册", forState: UIControlState.Normal)
 		button.setBackgroundImage(UIImage(named:"common_button_white_disable"), forState: UIControlState.Normal)
 		button.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Normal)
+		button.addTarget(self, action: #selector(VisitorView.registerButtonClicked), forControlEvents: UIControlEvents.TouchUpInside)
 		return button
 	}()
 	/// 登录按钮
@@ -126,6 +146,7 @@ class VisitorView: UIView {
 		button.setTitle("登录", forState: UIControlState.Normal)
 		button.setBackgroundImage(UIImage(named:"common_button_white_disable"), forState: UIControlState.Normal)
 		button.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Normal)
+		button.addTarget(self, action: #selector(VisitorView.loginButtonClicked), forControlEvents: UIControlEvents.TouchUpInside)
 		return button
 	}()
 }
