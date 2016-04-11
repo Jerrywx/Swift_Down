@@ -9,7 +9,7 @@
 import UIKit
 
 class VisitorView: UIView {
-
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		// 初始化UI
@@ -18,6 +18,27 @@ class VisitorView: UIView {
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+	
+	
+	/**
+	根据频道选择相对的视图
+	
+	- parameter isHome:    是否是首页
+	- parameter imageName: 中心图片
+	- parameter message:   提示文字
+	*/
+	func setupVisitorView(isHome: Bool, imageName: String, message: String) {
+		
+		// 设置控件
+		iconView.hidden = !isHome
+		homeIconView.image = UIImage(named: imageName)
+		messageLabel.text = message
+		
+		// 设置动画
+		if isHome {
+			startAnimation()
+		}
 	}
 	
 	/**
@@ -48,7 +69,22 @@ class VisitorView: UIView {
 		loginButton.xmg_AlignVertical(type: XMG_AlignType.BottomRight, referView: messageLabel, size: CGSize(width: 100, height: 35), offset: CGPoint(x: 0, y: 20))
 		
 	}
-
+	
+	/**
+	开始动画
+	*/
+	private func startAnimation() {
+		// 1. 创建动画
+		let animation = CABasicAnimation(keyPath: "transform.rotation")
+		// 2. 设置动画属性
+		animation.toValue = 2 * M_PI
+		animation.duration = 20
+		animation.repeatCount = MAXFLOAT
+		animation.removedOnCompletion = false
+		// 将动画添加到图层
+		iconView.layer.addAnimation(animation, forKey: nil)
+		
+	}
 
 	// MARK: - 懒加载
 	/// 背景图标

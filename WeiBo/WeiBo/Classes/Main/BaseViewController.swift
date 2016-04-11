@@ -10,10 +10,13 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-	var isLogin = false
+	// 登录状态
+	var userLogin = false
+	// 游客欢迎界面
+	var visitorView:VisitorView?
 	
 	override func loadView() {
-		isLogin ? super.viewDidLoad() : setupVisitorView()
+		userLogin ? super.viewDidLoad() : setupVisitorView()
 	}
 	
 	/**
@@ -22,6 +25,6 @@ class BaseViewController: UIViewController {
 	private func setupVisitorView() {
 		let customView = VisitorView()
 		view = customView
+		visitorView = customView
 	}
-	
 }
