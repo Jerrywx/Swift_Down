@@ -23,10 +23,15 @@ class BaseViewController: UIViewController, VisitorViewDelegate {
 	创建未登陆界面
 	*/
 	private func setupVisitorView() {
+		// 1. 初始化未登录界面
 		let customView = VisitorView()
 		customView.delegate = self
 		view = customView
 		visitorView = customView
+		// 2. 
+		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(BaseViewController.registerButtonDidClicked))
+		
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(BaseViewController.loginButtonDidClicked))
 	}
 	
 	// MARK: - VisitorViewDelegate
@@ -39,3 +44,16 @@ class BaseViewController: UIViewController, VisitorViewDelegate {
 		print(#function)
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

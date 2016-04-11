@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func setWindow() {
+		
+		// 0. 设置导航条和工具条外观
+		UINavigationBar.appearance().tintColor = UIColor.orangeColor()
+		UITabBar.appearance().tintColor = UIColor.orangeColor()
+		
+		// 1. 创建 window
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		window?.backgroundColor = UIColor.whiteColor()
 		window?.rootViewController = MainViewController()
