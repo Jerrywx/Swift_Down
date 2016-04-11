@@ -20,8 +20,7 @@ class BaseViewController: UIViewController {
 	创建未登陆界面
 	*/
 	private func setupVisitorView() {
-		let customView = UIView()
-		customView.backgroundColor = UIColor.redColor()
+		let customView = VisitorView()
 		view = customView
 	}
 	
