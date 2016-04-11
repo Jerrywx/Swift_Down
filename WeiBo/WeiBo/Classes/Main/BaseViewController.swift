@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController, VisitorViewDelegate {
 
 	// 登录状态
-	var userLogin = false
+	var userLogin = true
 	// 游客欢迎界面
 	var visitorView:VisitorView?
 	

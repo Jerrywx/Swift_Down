@@ -21,6 +21,7 @@
 		C40DA2C31CBA955300F33D06 /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DA2C21CBA955300F33D06 /* NullViewController.swift */; };
 		C466C41E1CBB46A200D6B111 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C466C41D1CBB46A200D6B111 /* VisitorView.swift */; };
 		C466C4201CBB4AA000D6B111 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C466C41F1CBB4AA000D6B111 /* UIView+AutoLayout.swift */; };
+		C466C4221CBB7DA200D6B111 /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C466C4211CBB7DA200D6B111 /* UIBarButtonItem+Category.swift */; };
 		DC28F1A11C92ACBEA4DCC9A7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CC11B57FB7045E95B50145 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		C40DA2C21CBA955300F33D06 /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 		C466C41D1CBB46A200D6B111 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		C466C41F1CBB4AA000D6B111 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		C466C4211CBB7DA200D6B111 /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		C40DA2A61CBA79FE00F33D06 /* Common(通用) */ = {
 			isa = PBXGroup;
 			children = (
+				C466C4211CBB7DA200D6B111 /* UIBarButtonItem+Category.swift */,
 			);
 			name = "Common(通用)";
 			path = Common;
@@ -447,6 +450,7 @@
 				C40DA2B71CBA79FE00F33D06 /* HomeViewController.swift in Sources */,
 				C40DA2B81CBA79FE00F33D06 /* BaseViewController.swift in Sources */,
 				C40DA2BD1CBA7A3200F33D06 /* AppDelegate.swift in Sources */,
+				C466C4221CBB7DA200D6B111 /* UIBarButtonItem+Category.swift in Sources */,
 				C466C4201CBB4AA000D6B111 /* UIView+AutoLayout.swift in Sources */,
 				C40DA2C31CBA955300F33D06 /* NullViewController.swift in Sources */,
 				C466C41E1CBB46A200D6B111 /* VisitorView.swift in Sources */,
