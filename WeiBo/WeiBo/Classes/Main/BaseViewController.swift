@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController, VisitorViewDelegate {
 
 	// 登录状态
-	var userLogin = true
+	var userLogin = false
 	// 游客欢迎界面
 	var visitorView:VisitorView?
 	
@@ -37,7 +37,9 @@ class BaseViewController: UIViewController, VisitorViewDelegate {
 	// MARK: - VisitorViewDelegate
 	// 登录事件
 	func loginButtonDidClicked() {
-		print(#function)
+//		print(#function)
+		let loginNac: UINavigationController = UINavigationController(rootViewController: OAuthViewController())
+		presentViewController(loginNac, animated: true, completion: nil)
 	}
 	// 注册事件
 	func registerButtonDidClicked() {

@@ -34,7 +34,7 @@ class HomeViewController: BaseViewController {
 		titleBtn.addTarget(self, action: #selector(HomeViewController.titleBtnClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 		navigationItem.titleView = titleBtn
 	}
-	
+
 	//MARK: - 按钮点击事件
 	func leftItemClick() {
 		print(#function)
