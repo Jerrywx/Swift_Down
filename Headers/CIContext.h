@@ -1,28 +1,4 @@
-/* CoreImage - CIContext.h
-
-   Copyright (c) 2014 Apple, Inc.
-   All rights reserved. */
-
-#import <CoreImage/CIImage.h>
-#import <CoreImage/CoreImageDefines.h>
-#import <CoreVideo/CoreVideo.h>
-
-#if TARGET_OS_IPHONE
- #import <OpenGLES/EAGL.h>
-#else
- #import <OpenGL/CGLTypes.h>
-#endif 
-
-@class CIFilter;
-
-@protocol MTLDevice, MTLTexture, MTLCommandBuffer;
-
-NS_ASSUME_NONNULL_BEGIN
-
-
-NS_CLASS_AVAILABLE(10_4, 5_0)
-@interface CIContext : NSObject
-{
+@interface CIContext : NSObject {
     void *_priv;
 }
 
@@ -104,8 +80,7 @@ CORE_IMAGE_EXPORT NSString * const kCIContextPriorityRequestLow NS_AVAILABLE(10_
  * The [context drawImage:...] render methods will render to the CGContext.
  */
 + (CIContext *)contextWithCGContext:(CGContextRef)cgctx
-                            options:(nullable NSDictionary<NSString*,id> *)options
-    NS_AVAILABLE(10_4,9_0);
+                            options:(nullable NSDictionary<NSString*,id> *)options;
 
 
 #pragma mark - context without specifying a destination
@@ -118,17 +93,13 @@ CORE_IMAGE_EXPORT NSString * const kCIContextPriorityRequestLow NS_AVAILABLE(10_
  * The [context drawImage:...] render methods will not operate on this type
  * of context.
  */
++ (CIContext *)contextWithOptions:(nullable NSDictionary<NSString*,id> *)options;
 
-+ (CIContext *)contextWithOptions:(nullable NSDictionary<NSString*,id> *)options
-    NS_AVAILABLE(10_4,5_0);
++ (CIContext *)context;
 
-+ (CIContext *)context NS_AVAILABLE(10_4,5_0);
+- (instancetype)initWithOptions:(nullable NSDictionary<NSString*,id> *)options;
 
-- (instancetype)initWithOptions:(nullable NSDictionary<NSString*,id> *)options
-NS_AVAILABLE(10_4,5_0);
-
-- (instancetype)init NS_AVAILABLE(10_4,5_0);
-
+- (instancetype)init;
 
 #pragma mark - contextWithEAGLContext
 
@@ -140,36 +111,26 @@ NS_AVAILABLE(10_4,5_0);
  * The [context drawImage:...] render methods will render to the EAGLContext.
  */
 #if TARGET_OS_IPHONE
-+ (CIContext *)contextWithEAGLContext:(EAGLContext *)eaglContext
-    NS_AVAILABLE_IOS(5_0);
++ (CIContext *)contextWithEAGLContext:(EAGLContext *)eaglContext;
 
 + (CIContext *)contextWithEAGLContext:(EAGLContext *)eaglContext
-                              options:(nullable NSDictionary<NSString*,id> *)options
-    NS_AVAILABLE_IOS(5_0);
+                              options:(nullable NSDictionary<NSString*,id> *)options;
 #endif
 
 
 #pragma mark - contextWithMTLDevice
 
-/* If a system has more than one MTLDevice, then you can create a CIContext
- * that uses a specific device. If a client wishes to use the default MTLDevice
- * then call [CIContext contextWithOptions:] instead. */
 + (CIContext *)contextWithMTLDevice:(id<MTLDevice>)device NS_AVAILABLE(10_11,9_0);
 
 + (CIContext *)contextWithMTLDevice:(id<MTLDevice>)device
-                            options:(nullable NSDictionary<NSString*,id> *)options
-    NS_AVAILABLE(10_11,9_0);
+                            options:(nullable NSDictionary<NSString*,id> *)options;
 
 
 #pragma mark - properties
-
 // The working color space of the CIContext
 // The property will be null if the context was created with color management disabled.
-#if !defined(SWIFT_CLASS_EXTRA) || (defined(SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH) && SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH >= 2)
-@property (nullable, nonatomic, readonly) CGColorSpaceRef workingColorSpace NS_AVAILABLE(10_11,9_0);
-#else
-@property (nonatomic, readonly) CGColorSpaceRef workingColorSpace NS_AVAILABLE(10_11,9_0);
-#endif
+@property (nullable, nonatomic, readonly) CGColorSpaceRef workingColorSpace;
+
 
 // The working pixel format of the CIContext used for intermediate buffers
 @property (nonatomic, readonly) CIFormat workingFormat NS_AVAILABLE(10_11,9_0);
@@ -193,15 +154,9 @@ NS_AVAILABLE(10_4,5_0);
  * the context, then create and return a new CoreGraphics image with
  * the results. The caller is responsible for releasing the returned image.
  * The return value will be null if size is empty or too big. */
-#if !defined(SWIFT_CLASS_EXTRA) || (defined(SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH) && SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH >= 2)
-- (nullable CGImageRef)createCGImage:(CIImage *)image
-                            fromRect:(CGRect)fromRect
-CF_RETURNS_RETAINED;
-#else
+
 - (CGImageRef)createCGImage:(CIImage *)image
-                   fromRect:(CGRect)fromRect
-CF_RETURNS_RETAINED;
-#endif
+				   fromRect:(CGRect)fromRect;
 
 /* Create a new CGImage from the specified subrect of the image. If
  * non-nil the new image will be created in the specified format and colorspace.
@@ -209,19 +164,10 @@ CF_RETURNS_RETAINED;
  * and must match the specified CIFormat.
  * This will return null if fromRect is empty or infinite or the format isn't supported.
  */
-#if !defined(SWIFT_CLASS_EXTRA) || (defined(SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH) && SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH >= 2)
 - (nullable CGImageRef)createCGImage:(CIImage *)image
                             fromRect:(CGRect)fromRect
                               format:(CIFormat)format
-                          colorSpace:(nullable CGColorSpaceRef)colorSpace
-CF_RETURNS_RETAINED;
-#else
-- (CGImageRef)createCGImage:(CIImage *)image
-                   fromRect:(CGRect)fromRect
-                     format:(CIFormat)format
-                 colorSpace:(nullable CGColorSpaceRef)colorSpace
-CF_RETURNS_RETAINED;
-#endif
+                          colorSpace:(nullable CGColorSpaceRef)colorSpace;
 
 /* Create a new CGImage from the specified subrect of the image.
  * The new CGImageRef will be created in the specified format and colorspace.
@@ -232,35 +178,18 @@ CF_RETURNS_RETAINED;
  * If deferred is NO, then the CIImage will be rendered once when this method is called.
  * If deferred is YES, then the CIImage will be rendered whenever the CGImage is rendered.
  */
-#if !defined(SWIFT_CLASS_EXTRA) || (defined(SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH) && SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH >= 2)
 - (nullable CGImageRef)createCGImage:(CIImage *)image
                             fromRect:(CGRect)fromRect
                               format:(CIFormat)format
                           colorSpace:(nullable CGColorSpaceRef)colorSpace
-                            deferred:(BOOL)deferred
-CF_RETURNS_RETAINED NS_AVAILABLE(10_12,10_0);
-#else
-- (CGImageRef)createCGImage:(CIImage *)image
-                   fromRect:(CGRect)fromRect
-                     format:(CIFormat)format
-                 colorSpace:(nullable CGColorSpaceRef)colorSpace
-                   deferred:(BOOL)deferred
-CF_RETURNS_RETAINED NS_AVAILABLE(10_12,10_0);
-#endif
+                            deferred:(BOOL)deferred;
 
 /* Create a CoreGraphics layer object suitable for creating content for
  * subsequently rendering into this CI context. The 'info' parameter is
  * passed into CGLayerCreate () as the auxiliaryInfo dictionary.
  * This will return null if size is empty or infinite. */
-#if !defined(SWIFT_CLASS_EXTRA) || (defined(SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH) && SWIFT_SDK_OVERLAY_COREIMAGE_EPOCH >= 2)
 - (nullable CGLayerRef)createCGLayerWithSize:(CGSize)size
-                                        info:(nullable CFDictionaryRef)info
-CF_RETURNS_RETAINED NS_DEPRECATED_MAC(10_4,10_11);
-#else
-- (CGLayerRef)createCGLayerWithSize:(CGSize)size
-                               info:(nullable CFDictionaryRef)info
-CF_RETURNS_RETAINED NS_DEPRECATED_MAC(10_4,10_11);
-#endif
+                                        info:(nullable CFDictionaryRef)info;
 
 /* Render 'image' to the given bitmap.
  * Passing a 'colorSpace' value of null means:
@@ -343,7 +272,6 @@ toCVPixelBuffer:(CVPixelBufferRef)buffer
 
 @end
 
-
 @interface CIContext (OfflineGPUSupport)
 
 /* Not all GPUs will be driving a display. If they are offline we can still use them
@@ -416,5 +344,3 @@ toCVPixelBuffer:(CVPixelBufferRef)buffer
 
 
 @end
-
-NS_ASSUME_NONNULL_END
