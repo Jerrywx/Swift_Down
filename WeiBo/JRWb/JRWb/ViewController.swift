@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
+	// A 76x76@2x app icon is required for iPad apps targeting iOS 7.0 and later
 
 }
 
