@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C44073241E269264004874AC /* JRMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44073231E269264004874AC /* JRMainViewController.swift */; };
 		C46AFA371E267EDA0027F7A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AFA361E267EDA0027F7A5 /* AppDelegate.swift */; };
 		C46AFA3E1E267EDA0027F7A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46AFA3D1E267EDA0027F7A5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C44073231E269264004874AC /* JRMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRMainViewController.swift; sourceTree = "<group>"; };
 		C46AFA331E267EDA0027F7A5 /* JRWb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRWb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46AFA361E267EDA0027F7A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46AFA3D1E267EDA0027F7A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,10 +59,10 @@
 		C440731C1E26913C004874AC /* View(视图和控制器) */ = {
 			isa = PBXGroup;
 			children = (
-				C440731D1E26913C004874AC /* Discover */,
-				C440731E1E26913C004874AC /* Home */,
 				C440731F1E26913C004874AC /* Main */,
+				C440731E1E26913C004874AC /* Home */,
 				C44073201E26913C004874AC /* Message */,
+				C440731D1E26913C004874AC /* Discover */,
 				C44073211E26913C004874AC /* Profile */,
 			);
 			path = "View(视图和控制器)";
@@ -83,6 +85,7 @@
 		C440731F1E26913C004874AC /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C44073231E269264004874AC /* JRMainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 		C46AFA2B1E267EDA0027F7A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JR;
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "王潇";
@@ -215,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46AFA371E267EDA0027F7A5 /* AppDelegate.swift in Sources */,
+				C44073241E269264004874AC /* JRMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
