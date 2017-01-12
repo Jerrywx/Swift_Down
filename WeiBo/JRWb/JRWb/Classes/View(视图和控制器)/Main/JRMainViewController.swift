@@ -23,9 +23,10 @@ extension JRMainViewController {
 	/// 设置所有子控制器
 	func setUpChildControllers() {
 		
-		let vcArray = [["clsName":"JRHomeViewController",
-		                "title":"首页",
-		                "imageName":"imageName"],
+		let vcArray = [["clsName":"JRHomeViewController"	,"title":"首页","imageName":"tabbar_home"],
+		               ["clsName":"JRMessageViewController"	,"title":"消息","imageName":"tabbar_message_center"],
+		               ["clsName":"JRDiscoverViewController","title":"发现","imageName":"tabbar_discover"],
+		               ["clsName":"JRProfileViewController"	,"title":"我的","imageName":"tabbar_profile"],
 		               ]
 		
 		var arrayM = [UIViewController]()
@@ -58,9 +59,11 @@ extension JRMainViewController {
 		print(imageName)
 		print(cls)
 		
-		let vc = cls.init()
+		let vc   = cls.init()
 		vc.title = title
-		let nav = JRNavigationController(rootViewController: vc)
+		vc.tabBarItem.image = UIImage(named: imageName)
+		vc.tabBarItem.selectedImage = UIImage(named: imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
+		let nav  = JRNavigationController(rootViewController: vc)
 		
 		return nav
 	}
