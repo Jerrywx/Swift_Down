@@ -28,6 +28,7 @@
 		C430EFCF1E27D034007A4159 /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = C430EFC11E27D034007A4159 /* UIScreen+CZAddition.m */; };
 		C430EFD01E27D034007A4159 /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = C430EFC31E27D034007A4159 /* UIView+CZAddition.m */; };
 		C430EFD11E27D034007A4159 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = C430EFC51E27D034007A4159 /* UIViewController+CZAddition.m */; };
+		C430EFD51E27E029007A4159 /* Bundle-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430EFD41E27E029007A4159 /* Bundle-Extensions.swift */; };
 		C44073241E269264004874AC /* JRMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44073231E269264004874AC /* JRMainViewController.swift */; };
 		C46AFA371E267EDA0027F7A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AFA361E267EDA0027F7A5 /* AppDelegate.swift */; };
 		C46AFA3E1E267EDA0027F7A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46AFA3D1E267EDA0027F7A5 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		C430EFC41E27D034007A4159 /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
 		C430EFC51E27D034007A4159 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		C430EFD21E27D053007A4159 /* JRWb-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JRWb-Bridge.h"; sourceTree = "<group>"; };
+		C430EFD41E27E029007A4159 /* Bundle-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Extensions.swift"; sourceTree = "<group>"; };
 		C44073231E269264004874AC /* JRMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRMainViewController.swift; sourceTree = "<group>"; };
 		C46AFA331E267EDA0027F7A5 /* JRWb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRWb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46AFA361E267EDA0027F7A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			path = Additions;
 			sourceTree = "<group>";
 		};
+		C430EFD31E27E015007A4159 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C430EFD41E27E029007A4159 /* Bundle-Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C44073191E26913C004874AC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 		C440731B1E26913C004874AC /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				C430EFD31E27E015007A4159 /* Extensions */,
 				C430EFAC1E27D034007A4159 /* Additions */,
 				C42A92811E270ACF003D5B10 /* JRBaseTools.swift */,
 			);
@@ -326,6 +337,7 @@
 				C430EFCD1E27D034007A4159 /* UIColor+CZAddition.m in Sources */,
 				C42A92741E270968003D5B10 /* JRNavigationController.swift in Sources */,
 				C42A927A1E2709B4003D5B10 /* JRMessageViewController.swift in Sources */,
+				C430EFD51E27E029007A4159 /* Bundle-Extensions.swift in Sources */,
 				C44073241E269264004874AC /* JRMainViewController.swift in Sources */,
 				C42A927E1E2709C3003D5B10 /* JRProfileViewController.swift in Sources */,
 				C430EFD01E27D034007A4159 /* UIView+CZAddition.m in Sources */,
