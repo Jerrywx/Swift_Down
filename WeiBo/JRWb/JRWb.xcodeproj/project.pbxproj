@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42A92741E270968003D5B10 /* JRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A92731E270968003D5B10 /* JRNavigationController.swift */; };
+		C42A92761E270972003D5B10 /* JRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A92751E270972003D5B10 /* JRBaseViewController.swift */; };
+		C42A92781E2709A5003D5B10 /* JRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A92771E2709A5003D5B10 /* JRHomeViewController.swift */; };
+		C42A927A1E2709B4003D5B10 /* JRMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A92791E2709B4003D5B10 /* JRMessageViewController.swift */; };
+		C42A927C1E2709BC003D5B10 /* JRDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A927B1E2709BC003D5B10 /* JRDiscoverViewController.swift */; };
+		C42A927E1E2709C3003D5B10 /* JRProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A927D1E2709C3003D5B10 /* JRProfileViewController.swift */; };
 		C44073241E269264004874AC /* JRMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44073231E269264004874AC /* JRMainViewController.swift */; };
 		C46AFA371E267EDA0027F7A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AFA361E267EDA0027F7A5 /* AppDelegate.swift */; };
 		C46AFA3E1E267EDA0027F7A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46AFA3D1E267EDA0027F7A5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C42A92731E270968003D5B10 /* JRNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRNavigationController.swift; sourceTree = "<group>"; };
+		C42A92751E270972003D5B10 /* JRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseViewController.swift; sourceTree = "<group>"; };
+		C42A92771E2709A5003D5B10 /* JRHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRHomeViewController.swift; sourceTree = "<group>"; };
+		C42A92791E2709B4003D5B10 /* JRMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRMessageViewController.swift; sourceTree = "<group>"; };
+		C42A927B1E2709BC003D5B10 /* JRDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRDiscoverViewController.swift; sourceTree = "<group>"; };
+		C42A927D1E2709C3003D5B10 /* JRProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRProfileViewController.swift; sourceTree = "<group>"; };
 		C44073231E269264004874AC /* JRMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRMainViewController.swift; sourceTree = "<group>"; };
 		C46AFA331E267EDA0027F7A5 /* JRWb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRWb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46AFA361E267EDA0027F7A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +83,7 @@
 		C440731D1E26913C004874AC /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				C42A927B1E2709BC003D5B10 /* JRDiscoverViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -78,6 +91,7 @@
 		C440731E1E26913C004874AC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C42A92771E2709A5003D5B10 /* JRHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -86,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				C44073231E269264004874AC /* JRMainViewController.swift */,
+				C42A92731E270968003D5B10 /* JRNavigationController.swift */,
+				C42A92751E270972003D5B10 /* JRBaseViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -93,6 +109,7 @@
 		C44073201E26913C004874AC /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				C42A92791E2709B4003D5B10 /* JRMessageViewController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -100,6 +117,7 @@
 		C44073211E26913C004874AC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C42A927D1E2709C3003D5B10 /* JRProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -219,7 +237,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46AFA371E267EDA0027F7A5 /* AppDelegate.swift in Sources */,
+				C42A92741E270968003D5B10 /* JRNavigationController.swift in Sources */,
+				C42A927A1E2709B4003D5B10 /* JRMessageViewController.swift in Sources */,
 				C44073241E269264004874AC /* JRMainViewController.swift in Sources */,
+				C42A927E1E2709C3003D5B10 /* JRProfileViewController.swift in Sources */,
+				C42A927C1E2709BC003D5B10 /* JRDiscoverViewController.swift in Sources */,
+				C42A92761E270972003D5B10 /* JRBaseViewController.swift in Sources */,
+				C42A92781E2709A5003D5B10 /* JRHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
