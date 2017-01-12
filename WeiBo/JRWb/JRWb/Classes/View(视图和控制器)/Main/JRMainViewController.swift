@@ -63,6 +63,8 @@ extension JRMainViewController {
 		vc.title = title
 		vc.tabBarItem.image = UIImage(named: imageName)
 		vc.tabBarItem.selectedImage = UIImage(named: imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
+		vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)], for: .highlighted)
+		
 		let nav  = JRNavigationController(rootViewController: vc)
 		
 		return nav
