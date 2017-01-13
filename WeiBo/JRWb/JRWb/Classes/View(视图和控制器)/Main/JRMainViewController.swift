@@ -44,29 +44,25 @@ extension JRMainViewController {
 	/// - Returns: 自控制器
 	private func controler(dic:[String : String]) -> UIViewController{
 		
+		/// 解包
 		guard
-		
 		let clsName		= dic["clsName"],
 		let title		= dic["title"],
 		let imageName	= dic["imageName"],
 		let cls			= NSClassFromString(Bundle.main.namespace + "." + clsName) as? UIViewController.Type
-
 		else {
 			return UIViewController()
 		}
 		
-		print(title)
-		print(imageName)
-		print(cls)
-		
+		/// 创建子控制器
 		let vc   = cls.init()
 		vc.title = title
-		vc.tabBarItem.image = UIImage(named: imageName)
+		vc.tabBarItem.image			= UIImage(named: imageName)
 		vc.tabBarItem.selectedImage = UIImage(named: imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
-		vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)], for: .highlighted)
+		vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)], for: .highlighted)
 		
+		/// 返回子控制器
 		let nav  = JRNavigationController(rootViewController: vc)
-		
 		return nav
 	}
 	
