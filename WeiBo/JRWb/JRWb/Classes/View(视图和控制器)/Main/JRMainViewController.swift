@@ -10,21 +10,39 @@ import UIKit
 
 class JRMainViewController: UITabBarController {
 
+	/// viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		setUpChildControllers()
+		
+		setupComposeButton()
     }
+	
+	// MARK: - 私有控件
+	/// 撰写按钮
+	lazy var composeButton: UIButton = UIButton.cz_imageButton("tabbar_compose_icon_add",
+	                                                                   backgroundImageName: "tabbar_compose_button")
 }
 
 // MARK: - 设置主界面
 extension JRMainViewController {
+	
+	/// 设置撰写按钮
+	func setupComposeButton() {
+		tabBar.addSubview(composeButton)
+		/// 设置按钮的位置
+		let count = CGFloat(childViewControllers.count)
+		let w = tabBar.bounds.width / count - 1
+		composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
+	}
 	
 	/// 设置所有子控制器
 	func setUpChildControllers() {
 		
 		let vcArray = [["clsName":"JRHomeViewController"	,"title":"首页","imageName":"tabbar_home"],
 		               ["clsName":"JRMessageViewController"	,"title":"消息","imageName":"tabbar_message_center"],
+		               ["clsName":"UIViewController"],
 		               ["clsName":"JRDiscoverViewController","title":"发现","imageName":"tabbar_discover"],
 		               ["clsName":"JRProfileViewController"	,"title":"我的","imageName":"tabbar_profile"],
 		               ]

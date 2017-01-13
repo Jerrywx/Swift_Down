@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='Swift Guide(引导)'/>
+        <page name='The Basics(基础部分)'/>
+        <page name='Basic Operators(基本运算符)'/>
+        <page name='Strings and Characters(字符串和字符)'/>
+        <page name='Collection Types(集合类型)'/>
+        <page name='Control Flow(控制流)'/>
+        <page name='Functions(函数)'/>
+        <page name='Closures(闭包)'/>
+        <page name='Enumerations(枚举)'/>
+        <page name='Class and Struct(类和结构体)'/>
+        <page name='Properties(属性)'/>
+    </pages>
+</playground>
