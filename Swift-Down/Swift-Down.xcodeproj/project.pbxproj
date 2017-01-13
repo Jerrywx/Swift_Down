@@ -230,7 +230,7 @@
 				TargetAttributes = {
 					30CA30CD1E247FF200E8A7C0 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = B5SJ8JYP65;
+						DevelopmentTeam = 58VU78V7N6;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -405,10 +405,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = B5SJ8JYP65;
+				DEVELOPMENT_TEAM = 58VU78V7N6;
 				INFOPLIST_FILE = "Swift-Down/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jerry.wx.Swift-Down";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youranmuye2;
 				PRODUCT_NAME = Swift_Down;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -420,10 +420,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = B5SJ8JYP65;
+				DEVELOPMENT_TEAM = 58VU78V7N6;
 				INFOPLIST_FILE = "Swift-Down/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jerry.wx.Swift-Down";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youranmuye2;
 				PRODUCT_NAME = Swift_Down;
 				SWIFT_VERSION = 3.0;
 			};
