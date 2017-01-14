@@ -19,6 +19,13 @@ class JRMainViewController: UITabBarController {
 		setupComposeButton()
     }
 	
+	
+	// FIXME: 发布微博功能未实现
+	///
+	func composeStatus() {
+		print("发布微博功能")
+	}
+	
 	// MARK: - 私有控件
 	/// 撰写按钮
 	lazy var composeButton: UIButton = UIButton.cz_imageButton("tabbar_compose_icon_add",
@@ -35,6 +42,7 @@ extension JRMainViewController {
 		let count = CGFloat(childViewControllers.count)
 		let w = tabBar.bounds.width / count - 1
 		composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
+		composeButton.addTarget(self, action: #selector(composeStatus), for: .touchUpInside)
 	}
 	
 	/// 设置所有子控制器

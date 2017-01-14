@@ -12,24 +12,25 @@ class JRHomeViewController: JRBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	
+	/// 好友
+	@objc fileprivate func myFrients() {
+		print(#function)
+		let vc = JRDemoViewController()
+		vc.hidesBottomBarWhenPushed = true
+		navigationController?.pushViewController(vc, animated: true)
+	}
 }
+
+// MARK: - 界面设置
+extension JRHomeViewController {
+	
+	override func setupUI() {
+		super.setupUI()
+		
+		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", style: .plain, target: self, action: #selector(myFrients))
+	}
+}
+
