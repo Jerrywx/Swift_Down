@@ -28,13 +28,9 @@ extension JRHomeViewController {
 	
 	override func setupUI() {
 		super.setupUI()
-		
-//		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", style: .plain, target: self, action: #selector(myFrients))
-		
-		let button: UIButton = UIButton.cz_textButton("好友", fontSize: 16, normalColor: UIColor.darkGray, highlightedColor: UIColor.orange)
-		button.addTarget(self, action: #selector(myFrients), for: .touchUpInside)
-		navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
-		
+		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友",
+		                                                   target: self, 
+		                                                   action: #selector(myFrients))
 	}
 }
 

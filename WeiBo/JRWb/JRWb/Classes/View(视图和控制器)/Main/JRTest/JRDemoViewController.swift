@@ -26,7 +26,8 @@ extension JRDemoViewController {
 	
 	override func setupUI() {
 		super.setupUI()
-		
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "下一个", style: .plain, target: self, action: #selector(nextVC))
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "下一个",
+		                                                    target: self,
+		                                                    action: #selector(nextVC))
 	}
 }

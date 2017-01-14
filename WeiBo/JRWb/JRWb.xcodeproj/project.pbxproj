@@ -30,6 +30,7 @@
 		C430EFD11E27D034007A4159 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = C430EFC51E27D034007A4159 /* UIViewController+CZAddition.m */; };
 		C430EFD51E27E029007A4159 /* Bundle-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430EFD41E27E029007A4159 /* Bundle-Extensions.swift */; };
 		C437CB751E29B4A4005F8F1F /* JRDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C437CB741E29B4A4005F8F1F /* JRDemoViewController.swift */; };
+		C437CB771E2A169A005F8F1F /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C437CB761E2A169A005F8F1F /* UIBarButtonItem-Extension.swift */; };
 		C44073241E269264004874AC /* JRMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44073231E269264004874AC /* JRMainViewController.swift */; };
 		C46AFA371E267EDA0027F7A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AFA361E267EDA0027F7A5 /* AppDelegate.swift */; };
 		C46AFA3E1E267EDA0027F7A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46AFA3D1E267EDA0027F7A5 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		C430EFD21E27D053007A4159 /* JRWb-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JRWb-Bridge.h"; sourceTree = "<group>"; };
 		C430EFD41E27E029007A4159 /* Bundle-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Extensions.swift"; sourceTree = "<group>"; };
 		C437CB741E29B4A4005F8F1F /* JRDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRDemoViewController.swift; sourceTree = "<group>"; };
+		C437CB761E2A169A005F8F1F /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		C44073231E269264004874AC /* JRMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRMainViewController.swift; sourceTree = "<group>"; };
 		C46AFA331E267EDA0027F7A5 /* JRWb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRWb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46AFA361E267EDA0027F7A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C430EFD41E27E029007A4159 /* Bundle-Extensions.swift */,
+				C437CB761E2A169A005F8F1F /* UIBarButtonItem-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				C42A927E1E2709C3003D5B10 /* JRProfileViewController.swift in Sources */,
 				C430EFD01E27D034007A4159 /* UIView+CZAddition.m in Sources */,
 				C42A927C1E2709BC003D5B10 /* JRDiscoverViewController.swift in Sources */,
+				C437CB771E2A169A005F8F1F /* UIBarButtonItem-Extension.swift in Sources */,
 				C430EFD11E27D034007A4159 /* UIViewController+CZAddition.m in Sources */,
 				C430EFCB1E27D034007A4159 /* NSString+CZPath.m in Sources */,
 				C42A92801E270AC8003D5B10 /* JRBaseModel.swift in Sources */,
