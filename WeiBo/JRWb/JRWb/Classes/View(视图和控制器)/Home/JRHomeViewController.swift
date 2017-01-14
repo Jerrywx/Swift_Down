@@ -19,7 +19,6 @@ class JRHomeViewController: JRBaseViewController {
 	@objc fileprivate func myFrients() {
 		print(#function)
 		let vc = JRDemoViewController()
-		vc.hidesBottomBarWhenPushed = true
 		navigationController?.pushViewController(vc, animated: true)
 	}
 }
