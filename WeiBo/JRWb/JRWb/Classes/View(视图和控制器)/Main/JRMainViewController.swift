@@ -28,6 +28,10 @@ class JRMainViewController: UITabBarController {
 	///
 	func composeStatus() {
 		print("发布微博功能")
+		let vc = UIViewController()
+		vc.view.backgroundColor = UIColor.cz_random()
+		let navVC = UINavigationController(rootViewController: vc)
+		present(navVC, animated: true, completion: nil)
 	}
 	
 	override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
