@@ -27,6 +27,8 @@ class JRBaseViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		automaticallyAdjustsScrollViewInsets = false
 		/// 初始化 UI
 		setupUI()
 		/// 加载数据
@@ -52,8 +54,12 @@ extension JRBaseViewController {
 	/// 设置 TableView
 	private func setupTableView() {
 		tableView = UITableView(frame: view.bounds, style: .plain)
-		tableView?.delegate = self
-		tableView?.dataSource = self
+		tableView?.delegate		= self
+		tableView?.dataSource	= self
+		tableView?.contentInset = UIEdgeInsets(top: 64,
+		                                       left: 0, 
+		                                       bottom: tabBarController?.tabBar.bounds.height ?? 0,
+		                                       right: 0)
 		view.insertSubview(tableView!, belowSubview: navBar)
 	}
 	
@@ -62,7 +68,6 @@ extension JRBaseViewController {
 		view.backgroundColor = UIColor.cz_random()
 		view.addSubview(navBar)
 		navBar.items = [navItem]
-		
 		navBar.barTintColor  = UIColor.cz_color(withHex: 0xF6F6F6)
 		navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGray]
 	}
