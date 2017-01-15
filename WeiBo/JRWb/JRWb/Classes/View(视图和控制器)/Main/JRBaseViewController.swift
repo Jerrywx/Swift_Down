@@ -29,8 +29,13 @@ class JRBaseViewController: UIViewController {
         super.viewDidLoad()
 		/// 初始化 UI
 		setupUI()
-		
+		/// 加载数据
+		loadData()
     }
+	
+	/// 加载数据
+	func loadData() {
+	}
 }
 
 // MARK: - 界面设置
