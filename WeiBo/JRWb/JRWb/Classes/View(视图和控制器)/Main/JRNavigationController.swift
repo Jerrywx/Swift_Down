@@ -28,8 +28,25 @@ class JRNavigationController: UINavigationController {
 			/// 隐藏tabBar
 			viewController.hidesBottomBarWhenPushed = true
 		}
+		
+		if let vc = viewController as? JRBaseViewController {
+			
+			var title = childViewControllers.first?.title ?? "返回"
+			if childViewControllers.count > 1 {
+				title = "返回"
+			}
+			vc.navItem.leftBarButtonItem = UIBarButtonItem(title: title, 
+			                                               target: self, 
+			                                               action: #selector(popToPresent))
+		}
+		
 		/// 调用父类push
 		super.pushViewController(viewController, animated: animated)
+	}
+	
+	
+	@objc private func popToPresent() {
+		popViewController(animated: true)
 	}
 
 }

@@ -10,7 +10,7 @@ import UIKit
 
 extension UIBarButtonItem {
 	
-	convenience init(title: String, fontSize: CGFloat = 16, target: Any?, action: Selector) {
+	convenience init(title: String, fontSize: CGFloat = 16, target: Any?, action: Selector, isBack:Bool = false) {
 
 		let button: UIButton = UIButton.cz_textButton(title, fontSize: 16, normalColor: UIColor.darkGray, highlightedColor: UIColor.orange)
 		
