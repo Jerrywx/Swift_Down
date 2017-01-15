@@ -13,7 +13,7 @@ class JRDemoViewController: JRBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		navigationItem.title = "第\(navigationController?.childViewControllers.count ?? 0)个"
+		navItem.title = "第\(navigationController?.childViewControllers.count ?? 0)个"
     }
 	
 	@objc fileprivate func nextVC() {
@@ -26,8 +26,8 @@ extension JRDemoViewController {
 	
 	override func setupUI() {
 		super.setupUI()
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "下一个",
-		                                                    target: self,
-		                                                    action: #selector(nextVC))
+		navItem.rightBarButtonItem = UIBarButtonItem(title: "下一个",
+		                                             target: self,
+		                                             action: #selector(nextVC))
 	}
 }

@@ -38,5 +38,7 @@ extension JRBaseViewController {
 		view.backgroundColor = UIColor.cz_random()
 		view.addSubview(navBar)
 		navBar.items = [navItem]
+		
+		navBar.barTintColor  = UIColor.cz_color(withHex: 0xF6F6F6)
 	}	
 }
