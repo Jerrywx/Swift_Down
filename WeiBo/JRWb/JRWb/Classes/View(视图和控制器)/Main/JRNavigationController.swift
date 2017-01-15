@@ -37,7 +37,8 @@ class JRNavigationController: UINavigationController {
 			}
 			vc.navItem.leftBarButtonItem = UIBarButtonItem(title: title, 
 			                                               target: self, 
-			                                               action: #selector(popToPresent))
+			                                               action: #selector(popToPresent),
+			                                               isBack: true)
 		}
 		
 		/// 调用父类push

@@ -40,5 +40,6 @@ extension JRBaseViewController {
 		navBar.items = [navItem]
 		
 		navBar.barTintColor  = UIColor.cz_color(withHex: 0xF6F6F6)
+		navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGray]
 	}	
 }
