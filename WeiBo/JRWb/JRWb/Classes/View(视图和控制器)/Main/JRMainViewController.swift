@@ -19,6 +19,10 @@ class JRMainViewController: UITabBarController {
 		setupComposeButton()
     }
 	
+	// MARK: - 私有控件
+	/// 撰写按钮
+	lazy var composeButton: UIButton = UIButton.cz_imageButton("tabbar_compose_icon_add",
+	                                                           backgroundImageName: "tabbar_compose_button")
 	
 	// FIXME: 发布微博功能未实现
 	///
@@ -26,10 +30,10 @@ class JRMainViewController: UITabBarController {
 		print("发布微博功能")
 	}
 	
-	// MARK: - 私有控件
-	/// 撰写按钮
-	lazy var composeButton: UIButton = UIButton.cz_imageButton("tabbar_compose_icon_add",
-	                                                                   backgroundImageName: "tabbar_compose_button")
+	override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+		return .portrait
+	}
+	
 }
 
 // MARK: - 设置主界面
