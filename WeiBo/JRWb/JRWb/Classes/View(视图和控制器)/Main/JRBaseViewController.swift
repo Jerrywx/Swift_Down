@@ -37,15 +37,18 @@ class JRBaseViewController: UIViewController {
 extension JRBaseViewController {
 	
 	/// 界面设置
-	 func setupUI() {
+	func setupUI() {
 		/// 设置导航条
 		setupNavigationBar()
 		/// 设置TableView
 		setupTableView()
 	}
 	
+	/// 设置 TableView
 	private func setupTableView() {
 		tableView = UITableView(frame: view.bounds, style: .plain)
+		tableView?.delegate = self
+		tableView?.dataSource = self
 		view.insertSubview(tableView!, belowSubview: navBar)
 	}
 	
@@ -59,3 +62,22 @@ extension JRBaseViewController {
 		navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGray]
 	}
 }
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
+extension JRBaseViewController: UITableViewDataSource, UITableViewDelegate {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return 0
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		return UITableViewCell()
+	}
+}
+
+
+
+
+
+
+
