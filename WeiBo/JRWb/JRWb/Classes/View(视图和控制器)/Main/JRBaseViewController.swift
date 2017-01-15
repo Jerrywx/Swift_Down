@@ -17,6 +17,8 @@ class JRBaseViewController: UIViewController {
 	
 	lazy var navItem = UINavigationItem()
 	
+	var tableView: UITableView?
+	
 	override var title: String? {
 		didSet {
 			navItem.title = title
@@ -34,12 +36,26 @@ class JRBaseViewController: UIViewController {
 // MARK: - 界面设置
 extension JRBaseViewController {
 	
-	func setupUI() {
+	/// 界面设置
+	 func setupUI() {
+		/// 设置导航条
+		setupNavigationBar()
+		/// 设置TableView
+		setupTableView()
+	}
+	
+	private func setupTableView() {
+		tableView = UITableView(frame: view.bounds, style: .plain)
+		view.insertSubview(tableView!, belowSubview: navBar)
+	}
+	
+	/// 设置导航条
+	private func setupNavigationBar() {
 		view.backgroundColor = UIColor.cz_random()
 		view.addSubview(navBar)
 		navBar.items = [navItem]
 		
 		navBar.barTintColor  = UIColor.cz_color(withHex: 0xF6F6F6)
 		navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGray]
-	}	
+	}
 }
