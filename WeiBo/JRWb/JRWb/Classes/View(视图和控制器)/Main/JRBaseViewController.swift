@@ -10,14 +10,17 @@ import UIKit
 
 class JRBaseViewController: UIViewController {
 
+	/// 自定义NavigationBar
 	lazy var navBar = UINavigationBar(frame: CGRect(x: 0, 
 	                                                y: 0, 
 	                                                width: UIScreen.main.bounds.width, 
 	                                                height: 64))
-	
+	/// 自定义NavigationItem
 	lazy var navItem = UINavigationItem()
-	
+	/// TableView
 	var tableView: UITableView?
+	/// 刷新控件
+	var refreshControl: UIRefreshControl?
 	
 	override var title: String? {
 		didSet {
@@ -33,6 +36,10 @@ class JRBaseViewController: UIViewController {
 		setupUI()
 		/// 加载数据
 		loadData()
+		/// 添加刷新空间
+		refreshControl = UIRefreshControl()
+		tableView?.addSubview(refreshControl!)
+		refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
 	
 	/// 加载数据
