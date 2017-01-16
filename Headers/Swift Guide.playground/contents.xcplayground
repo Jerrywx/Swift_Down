@@ -12,5 +12,6 @@
         <page name='Enumerations(枚举)'/>
         <page name='Class and Struct(类和结构体)'/>
         <page name='Properties(属性)'/>
+        <page name='Extensions(扩展)'/>
     </pages>
 </playground>
