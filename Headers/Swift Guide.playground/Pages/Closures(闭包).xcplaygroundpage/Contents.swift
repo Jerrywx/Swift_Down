@@ -28,8 +28,46 @@ import Foundation
 */
 
 /*:
-	1.
+	1. 闭包表达式是一种利用简介语法构建内联闭包的方式。
 */
+
+/// sorted 方法
+let names = ["Charis", "Alex", "Ewa", "Barry", "Daniella"]
+
+/// 1. sorted1
+func backward(s1:String, s2:String) -> Bool {
+	return s1 > s2
+}
+
+let newNames = names.sorted(by: backward)
+//print(newNames)
+
+/// 2. sorted2
+var names2 = names.sorted { (s1:String, s2:String) -> Bool in
+	return s1 > s2
+}
+//print(names2)
+
+/// 3. sorted3
+names.sorted { (s1, s2) -> Bool in
+	return s1 > s2
+}
+
+/// 4. sorted4
+names2 = names.sorted(by: {(s1, s2) -> Bool in return s1 > s2})
+
+/// 5. sorted5
+names2 = names.sorted(by: {s1, s2 in return s1 > s2})
+//print(names2)
+
+/// 6. sorted6
+names2 = names.sorted(by: {s1, s2 in s1 > s2})
+//print(names2)
+
+/// 7. sorted7
+names2 = names.sorted(by: {$0 > $1})
+print(names2)
+
 
 
 /*:
