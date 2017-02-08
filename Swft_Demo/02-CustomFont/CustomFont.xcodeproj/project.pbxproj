@@ -12,6 +12,11 @@
 		301EC7F21E4B119C004EA25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301EC7F01E4B119C004EA25E /* Main.storyboard */; };
 		301EC7F41E4B119C004EA25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301EC7F31E4B119C004EA25E /* Assets.xcassets */; };
 		301EC7F71E4B119C004EA25E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301EC7F51E4B119C004EA25E /* LaunchScreen.storyboard */; };
+		C435D14E1E4B78A300F2F87D /* CustomFont.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C435D14C1E4B78A300F2F87D /* CustomFont.xcdatamodeld */; };
+		C435D1541E4B78CF00F2F87D /* Gaspar Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C435D1501E4B78CF00F2F87D /* Gaspar Regular.otf */; };
+		C435D1551E4B78CF00F2F87D /* MFJinHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C435D1511E4B78CF00F2F87D /* MFJinHei_Noncommercial-Regular.ttf */; };
+		C435D1561E4B78CF00F2F87D /* MFTongXin_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C435D1521E4B78CF00F2F87D /* MFTongXin_Noncommercial-Regular.ttf */; };
+		C435D1571E4B78CF00F2F87D /* MFZhiHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C435D1531E4B78CF00F2F87D /* MFZhiHei_Noncommercial-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		301EC7F31E4B119C004EA25E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301EC7F61E4B119C004EA25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		301EC7F81E4B119C004EA25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C435D14D1E4B78A300F2F87D /* CustomFont.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomFont.xcdatamodel; sourceTree = "<group>"; };
+		C435D1501E4B78CF00F2F87D /* Gaspar Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaspar Regular.otf"; sourceTree = "<group>"; };
+		C435D1511E4B78CF00F2F87D /* MFJinHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFJinHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		C435D1521E4B78CF00F2F87D /* MFTongXin_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFTongXin_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		C435D1531E4B78CF00F2F87D /* MFZhiHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFZhiHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			children = (
 				301EC7EC1E4B119B004EA25E /* AppDelegate.swift */,
 				301EC7EE1E4B119B004EA25E /* ViewController.swift */,
+				C435D14F1E4B78CF00F2F87D /* Fonts */,
 				301EC7FE1E4B16A9004EA25E /* SupportFile */,
 			);
 			path = CustomFont;
@@ -68,8 +79,20 @@
 				301EC7F31E4B119C004EA25E /* Assets.xcassets */,
 				301EC7F51E4B119C004EA25E /* LaunchScreen.storyboard */,
 				301EC7F81E4B119C004EA25E /* Info.plist */,
+				C435D14C1E4B78A300F2F87D /* CustomFont.xcdatamodeld */,
 			);
 			name = SupportFile;
+			sourceTree = "<group>";
+		};
+		C435D14F1E4B78CF00F2F87D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C435D1501E4B78CF00F2F87D /* Gaspar Regular.otf */,
+				C435D1511E4B78CF00F2F87D /* MFJinHei_Noncommercial-Regular.ttf */,
+				C435D1521E4B78CF00F2F87D /* MFTongXin_Noncommercial-Regular.ttf */,
+				C435D1531E4B78CF00F2F87D /* MFZhiHei_Noncommercial-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				301EC7F71E4B119C004EA25E /* LaunchScreen.storyboard in Resources */,
+				C435D1541E4B78CF00F2F87D /* Gaspar Regular.otf in Resources */,
+				C435D1571E4B78CF00F2F87D /* MFZhiHei_Noncommercial-Regular.ttf in Resources */,
+				C435D1551E4B78CF00F2F87D /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
 				301EC7F41E4B119C004EA25E /* Assets.xcassets in Resources */,
+				C435D1561E4B78CF00F2F87D /* MFTongXin_Noncommercial-Regular.ttf in Resources */,
 				301EC7F21E4B119C004EA25E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301EC7EF1E4B119B004EA25E /* ViewController.swift in Sources */,
+				C435D14E1E4B78A300F2F87D /* CustomFont.xcdatamodeld in Sources */,
 				301EC7ED1E4B119B004EA25E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5SJ8JYP65;
 				INFOPLIST_FILE = CustomFont/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jerry.wx.CustomFont;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,6 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5SJ8JYP65;
 				INFOPLIST_FILE = CustomFont/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jerry.wx.CustomFont;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,6 +345,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C435D14C1E4B78A300F2F87D /* CustomFont.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C435D14D1E4B78A300F2F87D /* CustomFont.xcdatamodel */,
+			);
+			currentVersion = C435D14D1E4B78A300F2F87D /* CustomFont.xcdatamodel */;
+			path = CustomFont.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 301EC7E11E4B119B004EA25E /* Project object */;
 }
