@@ -12,14 +12,22 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		setupUI()
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
-
 }
 
+// MARK: - 初始化界面
+extension ViewController {
+	
+	/// 初始化界面
+	fileprivate func setupUI() {
+		
+		/// 设置背景色
+		self.view.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.03529411765, blue: 0.06666666667, alpha: 1)
+		/// 设置状态栏
+		UIApplication.shared.statusBarStyle = .lightContent
+		
+	}
+	
+}
