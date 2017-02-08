@@ -15,5 +15,6 @@
         <page name='Methonds(方法)'/>
         <page name='Extensions(扩展)'/>
         <page name='Deinitialization(析构过程)'/>
+        <page name='Error Handling(错误处理)'/>
     </pages>
 </playground>
