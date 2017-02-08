@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Swft_Test.xcodeproj">
+      location = "self:StopWatch.xcodeproj">
    </FileRef>
 </Workspace>

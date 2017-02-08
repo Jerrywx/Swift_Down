@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Swft_Test
+//  StopWatch
 //
-//  Created by 王潇 on 2017/1/10.
+//  Created by 王潇 on 2017/2/8.
 //  Copyright © 2017年 王潇. All rights reserved.
 //
 
