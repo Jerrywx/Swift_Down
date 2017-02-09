@@ -143,8 +143,7 @@ extension DataRequest {
         queue: DispatchQueue? = nil,
         responseSerializer: T,
         completionHandler: @escaping (DataResponse<T.SerializedObject>) -> Void)
-        -> Self
-    {
+        -> Self {
         delegate.queue.addOperation {
             let result = responseSerializer.serializeResponse(
                 self.request,
@@ -288,8 +287,7 @@ extension DataRequest {
     public func responseData(
         queue: DispatchQueue? = nil,
         completionHandler: @escaping (DataResponse<Data>) -> Void)
-        -> Self
-    {
+        -> Self {
         return response(
             queue: queue,
             responseSerializer: DataRequest.dataResponseSerializer(),
@@ -469,7 +467,7 @@ extension DownloadRequest {
 }
 
 // MARK: - JSON
-
+///
 extension Request {
     /// Returns a JSON object contained in a result type constructed from the response data using `JSONSerialization`
     /// with the specified reading options.
@@ -503,7 +501,7 @@ extension Request {
         }
     }
 }
-
+/// 数据请求
 extension DataRequest {
     /// Creates a response serializer that returns a JSON object result type constructed from the response data using
     /// `JSONSerialization` with the specified reading options.
@@ -513,8 +511,7 @@ extension DataRequest {
     /// - returns: A JSON object response serializer.
     public static func jsonResponseSerializer(
         options: JSONSerialization.ReadingOptions = .allowFragments)
-        -> DataResponseSerializer<Any>
-    {
+        -> DataResponseSerializer<Any> {
         return DataResponseSerializer { _, response, data, error in
             return Request.serializeResponseJSON(options: options, response: response, data: data, error: error)
         }
@@ -531,8 +528,7 @@ extension DataRequest {
         queue: DispatchQueue? = nil,
         options: JSONSerialization.ReadingOptions = .allowFragments,
         completionHandler: @escaping (DataResponse<Any>) -> Void)
-        -> Self
-    {
+        -> Self {
         return response(
             queue: queue,
             responseSerializer: DataRequest.jsonResponseSerializer(options: options),
@@ -590,7 +586,6 @@ extension DownloadRequest {
 }
 
 // MARK: - Property List
-
 extension Request {
     /// Returns a plist object contained in a result type constructed from the response data using
     /// `PropertyListSerialization` with the specified reading options.
@@ -634,8 +629,7 @@ extension DataRequest {
     /// - returns: A property list object response serializer.
     public static func propertyListResponseSerializer(
         options: PropertyListSerialization.ReadOptions = [])
-        -> DataResponseSerializer<Any>
-    {
+        -> DataResponseSerializer<Any> {
         return DataResponseSerializer { _, response, data, error in
             return Request.serializeResponsePropertyList(options: options, response: response, data: data, error: error)
         }
@@ -652,8 +646,7 @@ extension DataRequest {
         queue: DispatchQueue? = nil,
         options: PropertyListSerialization.ReadOptions = [],
         completionHandler: @escaping (DataResponse<Any>) -> Void)
-        -> Self
-    {
+        -> Self {
         return response(
             queue: queue,
             responseSerializer: DataRequest.propertyListResponseSerializer(options: options),
@@ -712,3 +705,9 @@ extension DownloadRequest {
 
 /// A set of HTTP response status code that do not contain response data.
 private let emptyDataStatusCodes: Set<Int> = [204, 205]
+
+
+
+
+
+

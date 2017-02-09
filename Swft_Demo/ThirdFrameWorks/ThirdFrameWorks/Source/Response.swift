@@ -58,8 +58,8 @@ public struct DefaultDataResponse {
         data: Data?,
         error: Error?,
         timeline: Timeline = Timeline(),
-        metrics: AnyObject? = nil)
-    {
+        metrics: AnyObject? = nil) {
+
         self.request = request
         self.response = response
         self.data = data
@@ -109,8 +109,8 @@ public struct DataResponse<Value> {
         response: HTTPURLResponse?,
         data: Data?,
         result: Result<Value>,
-        timeline: Timeline = Timeline())
-    {
+        timeline: Timeline = Timeline()) {
+
         self.request = request
         self.response = response
         self.data = data
@@ -119,17 +119,14 @@ public struct DataResponse<Value> {
     }
 }
 
-// MARK: -
-
+// MARK: - 响应描述信息
 extension DataResponse: CustomStringConvertible, CustomDebugStringConvertible {
-    /// The textual representation used when written to an output stream, which includes whether the result was a
-    /// success or failure.
+    /// 请求URL
     public var description: String {
         return result.debugDescription
     }
 
-    /// The debug textual representation used when written to an output stream, which includes the URL request, the URL
-    /// response, the server data, the response serialization result and the timeline.
+	/// 响应体
     public var debugDescription: String {
         var output: [String] = []
 
@@ -189,8 +186,7 @@ public struct DefaultDownloadResponse {
         resumeData: Data?,
         error: Error?,
         timeline: Timeline = Timeline(),
-        metrics: AnyObject? = nil)
-    {
+        metrics: AnyObject? = nil) {
         self.request = request
         self.response = response
         self.temporaryURL = temporaryURL
@@ -252,8 +248,7 @@ public struct DownloadResponse<Value> {
         destinationURL: URL?,
         resumeData: Data?,
         result: Result<Value>,
-        timeline: Timeline = Timeline())
-    {
+        timeline: Timeline = Timeline()) {
         self.request = request
         self.response = response
         self.temporaryURL = temporaryURL

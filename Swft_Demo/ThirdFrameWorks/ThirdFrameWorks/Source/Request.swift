@@ -161,8 +161,7 @@ open class Request {
         user: String,
         password: String,
         persistence: URLCredential.Persistence = .forSession)
-        -> Self
-    {
+        -> Self {
         let credential = URLCredential(user: user, password: password, persistence: persistence)
         return authenticate(usingCredential: credential)
     }
@@ -344,7 +343,6 @@ extension Request: CustomDebugStringConvertible {
 }
 
 // MARK: -
-
 /// Specific type of `Request` that manages an underlying `URLSessionDataTask`.
 open class DataRequest: Request {
 
@@ -617,31 +615,3 @@ open class UploadRequest: DataRequest {
         return self
     }
 }
-
-// MARK: -
-
-#if !os(watchOS)
-
-/// Specific type of `Request` that manages an underlying `URLSessionStreamTask`.
-@available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
-open class StreamRequest: Request {
-    enum Streamable: TaskConvertible {
-        case stream(hostName: String, port: Int)
-        case netService(NetService)
-
-        func task(session: URLSession, adapter: RequestAdapter?, queue: DispatchQueue) throws -> URLSessionTask {
-            let task: URLSessionTask
-
-            switch self {
-            case let .stream(hostName, port):
-                task = queue.sync { session.streamTask(withHostName: hostName, port: port) }
-            case let .netService(netService):
-                task = queue.sync { session.streamTask(with: netService) }
-            }
-
-            return task
-        }
-    }
-}
-
-#endif

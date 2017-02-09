@@ -12,6 +12,23 @@
 		C42D9C5C1E4CC2B6005E6C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42D9C5A1E4CC2B6005E6C4F /* Main.storyboard */; };
 		C42D9C5E1E4CC2B6005E6C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42D9C5D1E4CC2B6005E6C4F /* Assets.xcassets */; };
 		C42D9C611E4CC2B6005E6C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42D9C5F1E4CC2B6005E6C4F /* LaunchScreen.storyboard */; };
+		C42D9C7D1E4CC2C5005E6C4F /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C691E4CC2C5005E6C4F /* AFError.swift */; };
+		C42D9C7E1E4CC2C5005E6C4F /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C6B1E4CC2C5005E6C4F /* Alamofire.swift */; };
+		C42D9C7F1E4CC2C5005E6C4F /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C6C1E4CC2C5005E6C4F /* DispatchQueue+Alamofire.swift */; };
+		C42D9C821E4CC2C5005E6C4F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C6F1E4CC2C5005E6C4F /* MultipartFormData.swift */; };
+		C42D9C831E4CC2C5005E6C4F /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C701E4CC2C5005E6C4F /* NetworkReachabilityManager.swift */; };
+		C42D9C841E4CC2C5005E6C4F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C711E4CC2C5005E6C4F /* Notifications.swift */; };
+		C42D9C851E4CC2C5005E6C4F /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C721E4CC2C5005E6C4F /* ParameterEncoding.swift */; };
+		C42D9C861E4CC2C5005E6C4F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C731E4CC2C5005E6C4F /* Request.swift */; };
+		C42D9C871E4CC2C5005E6C4F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C741E4CC2C5005E6C4F /* Response.swift */; };
+		C42D9C881E4CC2C5005E6C4F /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C751E4CC2C5005E6C4F /* ResponseSerialization.swift */; };
+		C42D9C891E4CC2C5005E6C4F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C761E4CC2C5005E6C4F /* Result.swift */; };
+		C42D9C8A1E4CC2C5005E6C4F /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C771E4CC2C5005E6C4F /* ServerTrustPolicy.swift */; };
+		C42D9C8B1E4CC2C5005E6C4F /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C781E4CC2C5005E6C4F /* SessionDelegate.swift */; };
+		C42D9C8C1E4CC2C5005E6C4F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C791E4CC2C5005E6C4F /* SessionManager.swift */; };
+		C42D9C8D1E4CC2C5005E6C4F /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C7A1E4CC2C5005E6C4F /* TaskDelegate.swift */; };
+		C42D9C8E1E4CC2C5005E6C4F /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C7B1E4CC2C5005E6C4F /* Timeline.swift */; };
+		C42D9C8F1E4CC2C5005E6C4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9C7C1E4CC2C5005E6C4F /* Validation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +39,24 @@
 		C42D9C5D1E4CC2B6005E6C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42D9C601E4CC2B6005E6C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42D9C621E4CC2B6005E6C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42D9C691E4CC2C5005E6C4F /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
+		C42D9C6A1E4CC2C5005E6C4F /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
+		C42D9C6B1E4CC2C5005E6C4F /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		C42D9C6C1E4CC2C5005E6C4F /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		C42D9C6F1E4CC2C5005E6C4F /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		C42D9C701E4CC2C5005E6C4F /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		C42D9C711E4CC2C5005E6C4F /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		C42D9C721E4CC2C5005E6C4F /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		C42D9C731E4CC2C5005E6C4F /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		C42D9C741E4CC2C5005E6C4F /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		C42D9C751E4CC2C5005E6C4F /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		C42D9C761E4CC2C5005E6C4F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		C42D9C771E4CC2C5005E6C4F /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		C42D9C781E4CC2C5005E6C4F /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		C42D9C791E4CC2C5005E6C4F /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		C42D9C7A1E4CC2C5005E6C4F /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
+		C42D9C7B1E4CC2C5005E6C4F /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		C42D9C7C1E4CC2C5005E6C4F /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +95,34 @@
 				C42D9C5D1E4CC2B6005E6C4F /* Assets.xcassets */,
 				C42D9C5F1E4CC2B6005E6C4F /* LaunchScreen.storyboard */,
 				C42D9C621E4CC2B6005E6C4F /* Info.plist */,
+				C42D9C681E4CC2C4005E6C4F /* Source */,
 			);
 			path = ThirdFrameWorks;
+			sourceTree = "<group>";
+		};
+		C42D9C681E4CC2C4005E6C4F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C42D9C691E4CC2C5005E6C4F /* AFError.swift */,
+				C42D9C6A1E4CC2C5005E6C4F /* Alamofire.h */,
+				C42D9C6B1E4CC2C5005E6C4F /* Alamofire.swift */,
+				C42D9C6C1E4CC2C5005E6C4F /* DispatchQueue+Alamofire.swift */,
+				C42D9C6F1E4CC2C5005E6C4F /* MultipartFormData.swift */,
+				C42D9C701E4CC2C5005E6C4F /* NetworkReachabilityManager.swift */,
+				C42D9C711E4CC2C5005E6C4F /* Notifications.swift */,
+				C42D9C721E4CC2C5005E6C4F /* ParameterEncoding.swift */,
+				C42D9C731E4CC2C5005E6C4F /* Request.swift */,
+				C42D9C741E4CC2C5005E6C4F /* Response.swift */,
+				C42D9C751E4CC2C5005E6C4F /* ResponseSerialization.swift */,
+				C42D9C761E4CC2C5005E6C4F /* Result.swift */,
+				C42D9C771E4CC2C5005E6C4F /* ServerTrustPolicy.swift */,
+				C42D9C781E4CC2C5005E6C4F /* SessionDelegate.swift */,
+				C42D9C791E4CC2C5005E6C4F /* SessionManager.swift */,
+				C42D9C7A1E4CC2C5005E6C4F /* TaskDelegate.swift */,
+				C42D9C7B1E4CC2C5005E6C4F /* Timeline.swift */,
+				C42D9C7C1E4CC2C5005E6C4F /* Validation.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +157,7 @@
 				TargetAttributes = {
 					C42D9C521E4CC2B6005E6C4F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = B5SJ8JYP65;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +198,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42D9C8E1E4CC2C5005E6C4F /* Timeline.swift in Sources */,
+				C42D9C851E4CC2C5005E6C4F /* ParameterEncoding.swift in Sources */,
+				C42D9C891E4CC2C5005E6C4F /* Result.swift in Sources */,
+				C42D9C841E4CC2C5005E6C4F /* Notifications.swift in Sources */,
+				C42D9C831E4CC2C5005E6C4F /* NetworkReachabilityManager.swift in Sources */,
+				C42D9C821E4CC2C5005E6C4F /* MultipartFormData.swift in Sources */,
+				C42D9C8A1E4CC2C5005E6C4F /* ServerTrustPolicy.swift in Sources */,
+				C42D9C8B1E4CC2C5005E6C4F /* SessionDelegate.swift in Sources */,
 				C42D9C591E4CC2B6005E6C4F /* ViewController.swift in Sources */,
 				C42D9C571E4CC2B6005E6C4F /* AppDelegate.swift in Sources */,
+				C42D9C7F1E4CC2C5005E6C4F /* DispatchQueue+Alamofire.swift in Sources */,
+				C42D9C881E4CC2C5005E6C4F /* ResponseSerialization.swift in Sources */,
+				C42D9C871E4CC2C5005E6C4F /* Response.swift in Sources */,
+				C42D9C8F1E4CC2C5005E6C4F /* Validation.swift in Sources */,
+				C42D9C861E4CC2C5005E6C4F /* Request.swift in Sources */,
+				C42D9C8D1E4CC2C5005E6C4F /* TaskDelegate.swift in Sources */,
+				C42D9C7E1E4CC2C5005E6C4F /* Alamofire.swift in Sources */,
+				C42D9C8C1E4CC2C5005E6C4F /* SessionManager.swift in Sources */,
+				C42D9C7D1E4CC2C5005E6C4F /* AFError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B5SJ8JYP65;
 				INFOPLIST_FILE = ThirdFrameWorks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.ThirdFrameWorks;
@@ -272,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B5SJ8JYP65;
 				INFOPLIST_FILE = ThirdFrameWorks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.ThirdFrameWorks;
@@ -299,6 +380,7 @@
 				C42D9C671E4CC2B6005E6C4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
