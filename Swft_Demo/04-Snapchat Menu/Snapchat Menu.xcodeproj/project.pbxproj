@@ -12,6 +12,8 @@
 		3072EC641E4C1169000D0FD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3072EC621E4C1169000D0FD2 /* Main.storyboard */; };
 		3072EC661E4C1169000D0FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3072EC651E4C1169000D0FD2 /* Assets.xcassets */; };
 		3072EC691E4C1169000D0FD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3072EC671E4C1169000D0FD2 /* LaunchScreen.storyboard */; };
+		3072EC741E4C12CA000D0FD2 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072EC731E4C12CA000D0FD2 /* CenterViewController.swift */; };
+		3072EC761E4C12E3000D0FD2 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072EC751E4C12E3000D0FD2 /* SideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3072EC651E4C1169000D0FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3072EC681E4C1169000D0FD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3072EC6A1E4C116A000D0FD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3072EC731E4C12CA000D0FD2 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
+		3072EC751E4C12E3000D0FD2 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,22 @@
 			children = (
 				3072EC5E1E4C1169000D0FD2 /* AppDelegate.swift */,
 				3072EC601E4C1169000D0FD2 /* ViewController.swift */,
+				3072EC751E4C12E3000D0FD2 /* SideViewController.swift */,
+				3072EC731E4C12CA000D0FD2 /* CenterViewController.swift */,
+				3072EC701E4C11EB000D0FD2 /* SupportFile */,
+			);
+			path = "Snapchat Menu";
+			sourceTree = "<group>";
+		};
+		3072EC701E4C11EB000D0FD2 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
 				3072EC621E4C1169000D0FD2 /* Main.storyboard */,
 				3072EC651E4C1169000D0FD2 /* Assets.xcassets */,
 				3072EC671E4C1169000D0FD2 /* LaunchScreen.storyboard */,
 				3072EC6A1E4C116A000D0FD2 /* Info.plist */,
 			);
-			path = "Snapchat Menu";
+			name = SupportFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,7 @@
 				TargetAttributes = {
 					3072EC5A1E4C1169000D0FD2 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = B5SJ8JYP65;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3072EC741E4C12CA000D0FD2 /* CenterViewController.swift in Sources */,
 				3072EC611E4C1169000D0FD2 /* ViewController.swift in Sources */,
 				3072EC5F1E4C1169000D0FD2 /* AppDelegate.swift in Sources */,
+				3072EC761E4C12E3000D0FD2 /* SideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +279,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B5SJ8JYP65;
 				INFOPLIST_FILE = "Snapchat Menu/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jerry.wx.Snapchat-Menu";
+				PRODUCT_BUNDLE_IDENTIFIER = jerry.wx.CustomFont;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -274,9 +292,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B5SJ8JYP65;
 				INFOPLIST_FILE = "Snapchat Menu/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jerry.wx.Snapchat-Menu";
+				PRODUCT_BUNDLE_IDENTIFIER = jerry.wx.CustomFont;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -301,6 +320,7 @@
 				3072EC6F1E4C116A000D0FD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
