@@ -9,5 +9,6 @@ target 'JRWb' do
   pod 'MBProgressHUD'	, '1.0.0'
   pod "pop"				, '1.0.9'
   pod "YYImage"			, '1.0.4'
+  pod 'Alamofire'
 
 end

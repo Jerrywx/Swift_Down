@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30ADD4831E4C76A1001012E5 /* JRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ADD4821E4C76A1001012E5 /* JRNetworkManager.swift */; };
 		70E31FCDAF3BB90B7D04F65E /* Pods_JRWb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF34D3D8029C931DC3F1621 /* Pods_JRWb.framework */; };
 		C42A92741E270968003D5B10 /* JRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A92731E270968003D5B10 /* JRNavigationController.swift */; };
 		C42A92761E270972003D5B10 /* JRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A92751E270972003D5B10 /* JRBaseViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		03860D69E2BB78FC8254DB99 /* Pods-JRWb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRWb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JRWb/Pods-JRWb.debug.xcconfig"; sourceTree = "<group>"; };
 		2BF34D3D8029C931DC3F1621 /* Pods_JRWb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JRWb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30ADD4821E4C76A1001012E5 /* JRNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRNetworkManager.swift; sourceTree = "<group>"; };
 		C42A92731E270968003D5B10 /* JRNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRNavigationController.swift; sourceTree = "<group>"; };
 		C42A92751E270972003D5B10 /* JRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseViewController.swift; sourceTree = "<group>"; };
 		C42A92771E2709A5003D5B10 /* JRHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRHomeViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30ADD4811E4C7643001012E5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				30ADD4821E4C76A1001012E5 /* JRNetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		48095168AD3466310916D6E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 		C440731B1E26913C004874AC /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				30ADD4811E4C7643001012E5 /* Network */,
 				C430EFD31E27E015007A4159 /* Extensions */,
 				C430EFAC1E27D034007A4159 /* Additions */,
 				C42A92811E270ACF003D5B10 /* JRBaseTools.swift */,
@@ -419,6 +430,7 @@
 			files = (
 				C430EFCA1E27D034007A4159 /* NSString+CZHash.m in Sources */,
 				C42A92821E270ACF003D5B10 /* JRBaseTools.swift in Sources */,
+				30ADD4831E4C76A1001012E5 /* JRNetworkManager.swift in Sources */,
 				C42A92841E270AD7003D5B10 /* JRBaseViewModel.swift in Sources */,
 				C46AFA371E267EDA0027F7A5 /* AppDelegate.swift in Sources */,
 				C430EFCF1E27D034007A4159 /* UIScreen+CZAddition.m in Sources */,
