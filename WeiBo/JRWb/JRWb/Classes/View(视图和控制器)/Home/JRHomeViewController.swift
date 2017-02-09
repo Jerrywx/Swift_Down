@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 private let cellID = "homeCell"
 
@@ -37,6 +38,13 @@ class JRHomeViewController: JRBaseViewController {
 			}
 			self.tableView?.reloadData()
 			self.refreshControl?.endRefreshing()
+		}
+		
+		Alamofire.request("https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E").response { (response) in
+			
+			print(response.data?.count)
+			print(String(data: response.data!, encoding: .utf8)!)
+			
 		}
 	}
 }
