@@ -22,6 +22,17 @@ class VideoCellCell: UITableViewCell {
 	let title: UILabel = UILabel()
 	let time: UILabel = UILabel()
 	
+	/// 视频模型
+	var video:video? {
+		didSet {
+			let image  = UIImage(named: (video?.image)!)
+			button.setBackgroundImage(image, for: .normal)
+			button.setImage(#imageLiteral(resourceName: "playBtn"), for: .normal)
+			title.text = video?.title
+			time.text  = video?.source
+		}
+	}
+	
 	/// 初始化
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)

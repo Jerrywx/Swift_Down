@@ -65,11 +65,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! VideoCellCell
 		cell.selectionStyle = .none
 		let videoModel = data[indexPath.row]
-		let image = UIImage(named: videoModel.image)
-		cell.button.setBackgroundImage(image, for: .normal)
-		cell.button.setImage(#imageLiteral(resourceName: "playBtn"), for: .normal)
-		cell.title.text = videoModel.title
-		cell.time.text = videoModel.source
+//		let image = UIImage(named: videoModel.image)
+//		cell.button.setBackgroundImage(image, for: .normal)
+//		cell.button.setImage(#imageLiteral(resourceName: "playBtn"), for: .normal)
+//		cell.title.text = videoModel.title
+//		cell.time.text = videoModel.source
+		cell.video = videoModel
 		return cell
 	}
 	
