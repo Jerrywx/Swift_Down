@@ -13,6 +13,7 @@
 		30A15B961E4BFF20003600DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A15B951E4BFF20003600DC /* Assets.xcassets */; };
 		30A15B991E4BFF20003600DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A15B971E4BFF20003600DC /* LaunchScreen.storyboard */; };
 		30A15BA21E4C044F003600DC /* VideoCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A15BA11E4C044F003600DC /* VideoCellCell.swift */; };
+		30A15BA41E4C0FC1003600DC /* moments.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 30A15BA31E4C0FB8003600DC /* moments.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		30A15B981E4BFF20003600DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30A15B9A1E4BFF20003600DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30A15BA11E4C044F003600DC /* VideoCellCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCellCell.swift; sourceTree = "<group>"; };
+		30A15BA31E4C0FB8003600DC /* moments.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moments.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		30A15BA01E4BFF2A003600DC /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				30A15BA31E4C0FB8003600DC /* moments.mp4 */,
 				30A15B921E4BFF20003600DC /* Main.storyboard */,
 				30A15B951E4BFF20003600DC /* Assets.xcassets */,
 				30A15B971E4BFF20003600DC /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30A15BA41E4C0FC1003600DC /* moments.mp4 in Resources */,
 				30A15B991E4BFF20003600DC /* LaunchScreen.storyboard in Resources */,
 				30A15B961E4BFF20003600DC /* Assets.xcassets in Resources */,
 				30A15B941E4BFF20003600DC /* Main.storyboard in Resources */,

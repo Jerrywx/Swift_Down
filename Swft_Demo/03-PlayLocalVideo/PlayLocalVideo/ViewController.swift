@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+	var playViewController = AVPlayerViewController()
+	var playerView = AVPlayer()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupUI()
 	}
-	
-	
+
 	var data = [
 		video(image: "videoScreenshot01", title: "Introduce 3DS Mario", source: "Youtube - 06:32"),
 		video(image: "videoScreenshot02", title: "Emoji Among Us",		source: "Vimeo - 3:34"),
@@ -24,7 +28,6 @@ class ViewController: UIViewController {
 		video(image: "videoScreenshot05", title: "Facebook HQ",			source: "Facebook - 10:20"),
 		video(image: "videoScreenshot06", title: "Lijiang Lugu Lake",	source: "Allen - 20:30")
 	]
-
 }
 
 // MARK: - 初始化界面
@@ -56,6 +59,10 @@ extension ViewController {
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
 	
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return 2
+	}
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		print(data.count)
 		 return data.count
@@ -65,17 +72,20 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! VideoCellCell
 		cell.selectionStyle = .none
 		let videoModel = data[indexPath.row]
-//		let image = UIImage(named: videoModel.image)
-//		cell.button.setBackgroundImage(image, for: .normal)
-//		cell.button.setImage(#imageLiteral(resourceName: "playBtn"), for: .normal)
-//		cell.title.text = videoModel.title
-//		cell.time.text = videoModel.source
 		cell.video = videoModel
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
+		
+		let path = Bundle.main.path(forResource: "moments", ofType: "mp4")
+		
+		playerView = AVPlayer(url: URL(fileURLWithPath: path!))
+		playViewController.player = playerView
+		self.present(playViewController, animated: true) {
+			self.playViewController.player?.play()
+		}
 	}
 }
 
