@@ -46,9 +46,9 @@ class JRHomeViewController: JRBaseViewController {
 //		}
 		
 		/// 
-		let res:DataRequest = Alamofire.request("https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E")
-		print(res.description)
-		print(res.debugDescription)
+//		let res:DataRequest = Alamofire.request("https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E")
+//		print(res.description)
+//		print(res.debugDescription)
 
 //		res.responseJSON { (response) in
 //			print(response.request!)  // original URL request
@@ -61,8 +61,13 @@ class JRHomeViewController: JRBaseViewController {
 //			}
 //		}
 		
-		
-		
+		JRNetworkManager.shared.myRequest("https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E") { (json, isSuccess) in
+			if isSuccess {
+				print("成功")
+//				print(String(data: json as! Data, encoding: .utf8)!)
+				print(json!)
+			}
+		}
 	}
 }
 
