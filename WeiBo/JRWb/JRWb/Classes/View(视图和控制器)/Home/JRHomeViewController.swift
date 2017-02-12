@@ -61,6 +61,7 @@ class JRHomeViewController: JRBaseViewController {
 //			}
 //		}
 		
+		
 		JRNetworkManager.shared.myRequest("https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E") { (json, isSuccess) in
 			if isSuccess {
 				print("成功")

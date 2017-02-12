@@ -70,6 +70,81 @@ print(names2)
 
 
 
+
+/*:
+	二、尾随闭包
+	什么是尾随闭包？
+	如果你需要将一个很长的闭包表达式作为最后一个参数传递给函数, 可以使用尾随闭包来增强函数可读性。尾随闭包是一个写在函数括号之后的闭包表达式, 函数支持将其最为最后一个参数调用。
+*/
+
+func someFunctionThatTasksAClosure(closure:() -> Void) {
+	// 函数体部分
+	closure()
+}
+
+someFunctionThatTasksAClosure {
+	print("函数")
+}
+
+let digitNames = [
+	0:"zero", 1:"One", 3:"Three", 4: "Four",
+	5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
+]
+
+let numbers = [16, 58, 510]
+let strings = numbers.map { (numb) -> String in
+	return "number"
+}
+
+print(strings)
+
+/*:
+	三、值捕获
+	什么是值捕获？
+	闭包而已在其被定义的上下文中捕获常量或变量。即使定义这些常量和变量的原作用域已经不存在，闭包仍然可以在闭包函数体内引用和修改这些值。
+*/
+
+
+/*:
+	四、闭包是引用类型
+	
+	五、逃逸闭包
+	当一个闭包作为参数传到一个函数中，但是这个闭包在函数返回之后才被执行，我们称该闭包从函数中逃逸
+
+*/
+
+var completionHandles:[()->Void] = []
+
+func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+	completionHandles.append(completionHandler)
+}
+
+func someFunctionWithNonescapingClosure(closure: () -> Void) {
+	closure()
+}
+
+class SomeClass {
+	var x = 10
+	func doSomething() {
+		someFunctionWithEscapingClosure { self.x = 100; print("AAA") }
+		someFunctionWithNonescapingClosure { x = 200 }
+	}
+}
+
+let instance = SomeClass()
+
+instance.doSomething()
+print(instance.x)
+completionHandles.first!()
+print(instance.x)
+
+
+/*:
+	六、自动闭包
+
+
+*/
+
 /*:
 ****
 [Swift Guide](Swift%20Guide(%E5%BC%95%E5%AF%BC)) | [Previous](@previous) | [Next](@next)
