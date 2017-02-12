@@ -15,7 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+		
+		let tabBarVC = UITabBarController()
+		window  = UIWindow(frame: UIScreen.main.bounds)
+		let vc1 = UINavigationController(rootViewController: ViewController())
+		let vc2 = SecondViewController()
+		
+		vc1.title = "Products"
+		vc2.title = "Us"
+		
+		tabBarVC.addChildViewController(vc1)
+		tabBarVC.addChildViewController(vc2)
+		window?.rootViewController = tabBarVC
+		window?.makeKeyAndVisible()
+		
+		
 		return true
 	}
 
