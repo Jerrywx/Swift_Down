@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 	var tableView:UITableView?
 	var resetBtn:UIButton?
 	var starBtn:UIButton?
+	var timer:Timer?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -60,8 +61,8 @@ extension ViewController {
 		timeLab?.textAlignment = .right
 		view.addSubview(timeLab!)
 		
-		timeLabel?.backgroundColor = #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)
-		timeLab?.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+//		timeLabel?.backgroundColor = #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)
+//		timeLab?.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
 		
 		/// 3. 
 		let frame = CGRect(x: 0, y: h2 + h1,
@@ -82,7 +83,6 @@ extension ViewController {
 		resetBtn?.center = CGPoint(x: w1 - 10, y: y1)
 		view.addSubview(resetBtn!)
 		resetBtn?.setTitle("Lap", for: .normal)
-//		resetBtn?.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
 		resetBtn?.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5), for: .normal)
 		resetBtn?.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5), for: .highlighted)
 		resetBtn?.titleLabel?.font = UIFont(name: ".SFUIText", size: 15)
@@ -112,6 +112,12 @@ extension ViewController {
 			
 			resetBtn?.setTitle("Lap", for: .normal)
 			resetBtn?.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+			
+			timer = Timer.scheduledTimer(timeInterval: 0.01,
+			                             target: self, 
+			                             selector: #selector(timeAct),
+			                             userInfo: nil, repeats: true)
+
 		} else {
 			sender.setTitle("Start", for: .normal)
 			sender.setTitleColor(#colorLiteral(red: 0, green: 1, blue: 0, alpha: 1), for: .normal)
@@ -119,6 +125,11 @@ extension ViewController {
 			
 			resetBtn?.setTitle("Reset", for: .normal)
 			resetBtn?.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+			
+			if nil != timer {
+				timer?.invalidate()
+				timer = nil
+			}
 		}
 	}
 	
@@ -135,6 +146,10 @@ extension ViewController {
 		} else {
 			print("计时-------------")
 		}
+	}
+	
+	@objc private func timeAct() {
+		print("aaaaaaaaa")
 	}
 }
 
