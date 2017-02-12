@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  LoveTweet
+//  Stopwatch
 //
 //  Created by 王潇 on 2017/2/12.
 //  Copyright © 2017年 王潇. All rights reserved.
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+		// Override point for customization after application launch.
 		return true
 	}
 

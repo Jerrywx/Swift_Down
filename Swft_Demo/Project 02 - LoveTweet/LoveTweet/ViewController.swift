@@ -12,14 +12,23 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		setupUI()
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
-
 }
 
+// MARK: - 初始化界面
+extension ViewController {
+	
+	fileprivate func setupUI() {
+		
+		let centerX = self.view.bounds.size.width * 0.5
+		let title = UILabel()
+		title.text = "LoveTweet"
+		title.sizeToFit()
+		title.center = CGPoint(x: centerX, y: 80)
+		title.font = UIFont(name: "System", size: 17)
+		view.addSubview(title)
+	}
+	
+}
