@@ -17,6 +17,9 @@ class ViewController: UIViewController {
 	var resetBtn:UIButton?
 	var starBtn:UIButton?
 	var timer:Timer?
+	var time:Int = 0
+	var subTime:Int = 0
+	var times:[String] = Array()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -49,7 +52,7 @@ extension ViewController {
 		/// 2.
 		timeLabel = UILabel()
 		timeLabel?.text = "00:00.00"
-		timeLabel?.font = UIFont(name: ".SFUIText", size: 40)
+		timeLabel?.font = UIFont(name: "AvenirNext-UltraLight", size: 40)
 		timeLabel?.sizeToFit()
 		timeLabel?.center = CGPoint(x: width * 0.5, y: 150)
 		view.addSubview(timeLabel!)
@@ -57,12 +60,9 @@ extension ViewController {
 		timeLab = UILabel(frame: CGRect(x: (timeLabel?.frame.maxX)! - 200, y: 100,
 		                                width: 200, height: 25))
 		timeLab?.text = "00:00.00"
-		timeLab?.font = UIFont(name: ".SFUIText", size: 17)
+		timeLab?.font = UIFont(name: "AvenirNext-UltraLight", size: 17)
 		timeLab?.textAlignment = .right
 		view.addSubview(timeLab!)
-		
-//		timeLabel?.backgroundColor = #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)
-//		timeLab?.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
 		
 		/// 3. 
 		let frame = CGRect(x: 0, y: h2 + h1,
@@ -70,7 +70,7 @@ extension ViewController {
 		tableView = UITableView(frame: frame)
 		tableView?.dataSource = self
 		tableView?.delegate   = self
-		tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+		tableView?.register(TimeTableViewCell.self, forCellReuseIdentifier: "cell")
 		view.addSubview(tableView!)
 		
 		let w1:CGFloat = width / 3
@@ -112,12 +112,13 @@ extension ViewController {
 			
 			resetBtn?.setTitle("Lap", for: .normal)
 			resetBtn?.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-			
-			timer = Timer.scheduledTimer(timeInterval: 0.01,
-			                             target: self, 
-			                             selector: #selector(timeAct),
-			                             userInfo: nil, repeats: true)
 
+			timer = Timer(timeInterval: 0.035,
+			              target: self, 
+			              selector: #selector(timeAct), 
+			              userInfo: nil,
+			              repeats: true)
+			RunLoop.current.add(timer!, forMode: .commonModes)
 		} else {
 			sender.setTitle("Start", for: .normal)
 			sender.setTitleColor(#colorLiteral(red: 0, green: 1, blue: 0, alpha: 1), for: .normal)
@@ -132,7 +133,6 @@ extension ViewController {
 			}
 		}
 	}
-	
 	/// 重置按钮事件
 	@objc private func resetBtnAct(sender: UIButton) {
 		
@@ -143,13 +143,35 @@ extension ViewController {
 			resetBtn?.isEnabled = false
 			starBtn?.setTitle("Start", for: .normal)
 			starBtn?.setTitleColor(#colorLiteral(red: 0, green: 1, blue: 0, alpha: 1), for: .normal)
+			
+			time	= 0
+			subTime = 0
+			timeLab?.text	= "00:00.00"
+			timeLabel?.text = "00:00.00"
+			times.removeAll()
+			tableView?.reloadData()
+			
 		} else {
-			print("计时-------------")
+			subTime = 0
+			times.append(caclTime(time: time))
+			tableView?.reloadData()
+			let indexPath = NSIndexPath(row: times.count - 1, section: 0)
+			tableView?.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
 		}
 	}
-	
+	/// 计时器
 	@objc private func timeAct() {
-		print("aaaaaaaaa")
+		time += 1
+		subTime += 1
+		timeLabel?.text = caclTime(time: time)
+		timeLab?.text = caclTime(time: subTime)
+	}
+	/// 计算时间
+	private func caclTime(time:NSInteger) -> String {
+		let h = time % 100
+		let f = (time / 100) % 60
+		let ho = (time / 100) / 60
+		return String(format: "%.2d:%.2d.%.2d", ho, f, h)
 	}
 }
 
@@ -157,13 +179,14 @@ extension ViewController {
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10
+		return times.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-		cell?.textLabel?.text = "aaaa"
-		return cell!
+		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TimeTableViewCell
+		cell.tips.text = String(format: "Tips %zd", indexPath.row + 1)
+		cell.timeLabel.text = times[indexPath.row]
+		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
