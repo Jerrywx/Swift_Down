@@ -31,7 +31,7 @@ throw VendingMachineError.InsufficientFunds(coinsNeeded: 5)
 
 /*:
 	二、处理错误
-****
+
 	1. 用throwing函数传递错误
 	什么是throwing函数？
 	为了标示一个函数、方法或构造器可以抛出错误, 在函数声明的参数列表之后加上throws关键字。一个标有throws关键字的函数被称作throwing函数。如果这个函数指定了返回值类型, throws关键字需要写在箭头(->)的全面。
@@ -90,7 +90,19 @@ class VendingMachine {
 let ven = VendingMachine()
 let a = try ven.vend(itemNamed: "Chips")
 print(a)
-print("AAA")
+
+
+/*:
+	2. 用Do-Catch处理错误
+	可以使用一个 do-catch语句运行一段闭包代码来处理错误。如果在do子句中的代码抛出了一个错误，这个错误会与catch子句做匹配，从而决定哪条子句能处理它。
+*/
+
+
+
+/*:
+	三、置顶清理操作
+
+*/
 
 
 
