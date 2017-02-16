@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4216CCD1E54AD0D000C8F50 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4216CCC1E54AD0D000C8F50 /* AddViewController.swift */; };
 		C425437D1E51FCCC00D1FAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425437C1E51FCCC00D1FAE2 /* AppDelegate.swift */; };
 		C425437F1E51FCCC00D1FAE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425437E1E51FCCC00D1FAE2 /* ViewController.swift */; };
 		C42543821E51FCCC00D1FAE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42543801E51FCCC00D1FAE2 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4216CCC1E54AD0D000C8F50 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		C42543791E51FCCC00D1FAE2 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C425437C1E51FCCC00D1FAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C425437E1E51FCCC00D1FAE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4216CCB1E549AF0000C8F50 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				C42543801E51FCCC00D1FAE2 /* Main.storyboard */,
+				C42543831E51FCCC00D1FAE2 /* Assets.xcassets */,
+				C42543851E51FCCC00D1FAE2 /* LaunchScreen.storyboard */,
+				C42543881E51FCCC00D1FAE2 /* Info.plist */,
+			);
+			name = SupportFile;
+			sourceTree = "<group>";
+		};
 		C42543701E51FCCC00D1FAE2 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +69,8 @@
 			children = (
 				C425437C1E51FCCC00D1FAE2 /* AppDelegate.swift */,
 				C425437E1E51FCCC00D1FAE2 /* ViewController.swift */,
-				C42543801E51FCCC00D1FAE2 /* Main.storyboard */,
-				C42543831E51FCCC00D1FAE2 /* Assets.xcassets */,
-				C42543851E51FCCC00D1FAE2 /* LaunchScreen.storyboard */,
-				C42543881E51FCCC00D1FAE2 /* Info.plist */,
+				C4216CCC1E54AD0D000C8F50 /* AddViewController.swift */,
+				C4216CCB1E549AF0000C8F50 /* SupportFile */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 			files = (
 				C425437F1E51FCCC00D1FAE2 /* ViewController.swift in Sources */,
 				C425437D1E51FCCC00D1FAE2 /* AppDelegate.swift in Sources */,
+				C4216CCD1E54AD0D000C8F50 /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +311,7 @@
 				C425438D1E51FCCC00D1FAE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

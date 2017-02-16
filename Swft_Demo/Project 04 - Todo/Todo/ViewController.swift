@@ -12,14 +12,33 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		setupUI()
 	}
+}
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+extension ViewController {
+	
+	fileprivate func setupUI() {
+		
+		view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+		title = "List"
+		
+		let leftBtn = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAct))
+		navigationItem.leftBarButtonItem = leftBtn
+		
+		let rightBtn = UIBarButtonItem(title: "➕", style: .plain, target: self, action: #selector(addAct))
+		navigationItem.rightBarButtonItem = rightBtn
+		
 	}
-
-
+	
+	@objc private func editAct() {
+		print(#function)
+	}
+	
+	@objc private func addAct() {
+		print(#function)
+		navigationController?.pushViewController(AddViewController(), animated: true)
+	}
 }
 
