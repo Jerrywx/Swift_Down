@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3038A9291E56CDC700B7F931 /* JRAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3038A9281E56CDC700B7F931 /* JRAlbum.swift */; };
 		305B61F51E24E38400225620 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305B61F41E24E38400225620 /* CoreImage.framework */; };
 		30CA30D71E247FF200E8A7C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CA30D51E247FF200E8A7C0 /* Main.storyboard */; };
 		30CA30D91E247FF200E8A7C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CA30D81E247FF200E8A7C0 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3038A9281E56CDC700B7F931 /* JRAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRAlbum.swift; sourceTree = "<group>"; };
 		305B61F41E24E38400225620 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		30CA30CE1E247FF200E8A7C0 /* Swift_Down.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Down.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CA30D61E247FF200E8A7C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3038A9271E56CCA400B7F931 /* JRPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				3038A9281E56CDC700B7F931 /* JRAlbum.swift */,
+			);
+			path = JRPhotos;
+			sourceTree = "<group>";
+		};
 		305B61F31E24E38400225620 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +209,7 @@
 		30CA310A1E2491A400E8A7C0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3038A9271E56CCA400B7F931 /* JRPhotos */,
 				30CA310B1E2498D600E8A7C0 /* Bundle+JRExtension.swift */,
 			);
 			path = Tools;
@@ -346,6 +357,7 @@
 				30CA30FA1E2489B800E8A7C0 /* JRMainViewController.swift in Sources */,
 				30CA30F11E2488F200E8A7C0 /* AppDelegate.swift in Sources */,
 				30CA30FC1E2489EA00E8A7C0 /* JRNavigationController.swift in Sources */,
+				3038A9291E56CDC700B7F931 /* JRAlbum.swift in Sources */,
 				30CA31051E248B1300E8A7C0 /* JRCocoaViewController.swift in Sources */,
 				30CA31091E248B2500E8A7C0 /* JROtherViewController.swift in Sources */,
 				30CA31031E248B0B00E8A7C0 /* JRBasicViewController.swift in Sources */,

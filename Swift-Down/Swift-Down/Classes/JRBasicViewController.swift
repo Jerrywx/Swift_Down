@@ -15,11 +15,12 @@ class JRBasicViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 		
-		netWork()
+//		netWork()
     }
 	
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		netWork()
+//		netWork()
+		photo()
 	}
 	
 	func netWork() {
@@ -31,6 +32,13 @@ class JRBasicViewController: UIViewController {
 			print("Error: \(String(describing: response.error))")
 		}
 	}
+	
+	func photo() {
+		
+		let album = JRAlbum()
+		album.getAllAlbums()
+	}
+	
 }
 
 // MARK: - Demo
