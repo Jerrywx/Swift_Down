@@ -10,5 +10,5 @@ target 'JRWb' do
   pod "pop"				, '1.0.9'
   pod "YYImage"			, '1.0.4'
   pod 'Alamofire'
-
+  pod 'ReactiveCocoa',  '~> 5.0.0'
 end
