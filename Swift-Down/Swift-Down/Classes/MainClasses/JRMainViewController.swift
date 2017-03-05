@@ -57,16 +57,15 @@ extension JRMainViewController {
 			return UIViewController()
 		}
 		
-		
-		print(imageName)
-		
 		/// 2. 创建实体控制器
 		let vc	 = cls.init()
 		vc.title = title
 		vc.tabBarItem.image = #imageLiteral(resourceName: "tabbar_home")
 //		vc.tabBarItem.selectedImage = #imageLiteral(resourceName: "tabbar_home_selected").withRenderingMode(.alwaysOriginal)
-		vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)], for: .highlighted)
-		vc.tabBarItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 14)], for: .normal)
+		
+		/// 自定义 TabBar 样式
+//		vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)], for: .highlighted)
+//		vc.tabBarItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 14)], for: .normal)
 		let nav  = UINavigationController(rootViewController: vc)
 
 		return nav
