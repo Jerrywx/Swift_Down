@@ -40,33 +40,30 @@ class JRHomeViewController: JRBaseViewController {
 			self.refreshControl?.endRefreshing()
 		}
 		
-		/// 1.
-//		Alamofire.request("https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E").response { (response) in
-//			print(String(data: response.data!, encoding: .utf8)!)
-//		}
+		let urlString = "https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E"
 		
-		/// 
-//		let res:DataRequest = Alamofire.request("https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E")
-//		print(res.description)
-//		print(res.debugDescription)
-
-//		res.responseJSON { (response) in
-//			print(response.request!)  // original URL request
-//			print(response.response!) // HTTP URL response
-//			print(response.data!)     // server data
-//			print(response.result)   // result of response serialization
-//			
-//			if let JSON = response.result.value {
-//				print("JSON: \(JSON)")
+//		JRNetworkManager.shared.myRequest(urlString) { (json, isSuccess) in
+//			if isSuccess {
+//				print("成功")
+//				
+//				guard
+//					let jsonData = json
+//				else {
+//					return
+//				}
+//				print(jsonData)
 //			}
 //		}
 		
-		
-		JRNetworkManager.shared.myRequest("https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E") { (json, isSuccess) in
+		JRNetworkManager.shared.myRequest(urlString, method: .GET) { (json, isSuccess) in
 			if isSuccess {
 				print("成功")
-//				print(String(data: json as! Data, encoding: .utf8)!)
-				print(json!)
+				guard
+					let jsonData = json
+					else {
+						return
+				}
+				print(jsonData)
 			}
 		}
 	}
