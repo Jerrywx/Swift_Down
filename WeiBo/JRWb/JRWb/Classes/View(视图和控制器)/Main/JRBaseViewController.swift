@@ -44,6 +44,7 @@ class JRBaseViewController: UIViewController {
 	
 	/// 加载数据
 	func loadData() {
+		refreshControl?.endRefreshing()
 	}
 }
 
