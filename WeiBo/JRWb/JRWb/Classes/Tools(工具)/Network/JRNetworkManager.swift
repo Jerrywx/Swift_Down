@@ -45,8 +45,15 @@ class JRNetworkManager {
 //		Generic parameter 'Value' could not be inferred
 		/// 成功回调闭包
 		let completion = { (response: DataResponse<Any>) -> () in
-			print("通过 成功回调闭包 执行")
-			completion(response.result.value as AnyObject?, true)
+			
+			/// 网络请求判断
+			if response.result.isSuccess {
+				completion(response.result.value as AnyObject?, true)
+			} else {
+				/// 输出请求错误
+				print("网络请求错误: \(response.result.error)")
+				completion(nil, false)
+			}
 		}
 		
 		/// 网络请求

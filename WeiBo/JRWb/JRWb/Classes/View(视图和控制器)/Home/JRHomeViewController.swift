@@ -32,39 +32,16 @@ class JRHomeViewController: JRBaseViewController {
 	/// 加载数据
 	override func loadData() {
 		
+		JRNetworkManager.shared.statusList { (list: [[String : AnyObject]], isSuccess: Bool) in
+			print(list)
+		}
+		
 		DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) { 
 			for i in 0..<5 {
 				self.statusList.insert(i.description, at: 0)
 			}
 			self.tableView?.reloadData()
 			self.refreshControl?.endRefreshing()
-		}
-		
-		let urlString = "https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00fxAYtCVXkvuB58b1c81191OUuc7E"
-		
-//		JRNetworkManager.shared.myRequest(urlString) { (json, isSuccess) in
-//			if isSuccess {
-//				print("成功")
-//				
-//				guard
-//					let jsonData = json
-//				else {
-//					return
-//				}
-//				print(jsonData)
-//			}
-//		}
-		
-		JRNetworkManager.shared.myRequest(urlString, method: .GET) { (json, isSuccess) in
-			if isSuccess {
-				print("成功")
-				guard
-					let jsonData = json
-					else {
-						return
-				}
-				print(jsonData)
-			}
 		}
 	}
 }
