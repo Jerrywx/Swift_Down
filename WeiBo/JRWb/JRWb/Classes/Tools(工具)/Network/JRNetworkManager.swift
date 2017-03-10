@@ -21,7 +21,7 @@ class JRNetworkManager {
 	static let shared = JRNetworkManager()
 	
 	/// 访问令牌
-	var accessToken: String? = "2.00fxAYtCVXkvuB58b1c81191OUuc7E"
+	var accessToken: String? = "2.00fxAYtCVXkvuB58b1c81191OUuc7E22"
 
 	
 	func tokenRequest(_ url: URLConvertible,
@@ -33,6 +33,7 @@ class JRNetworkManager {
 		
 		/// 判断token
 		guard let token = accessToken else {
+			// FIXME: 发送通知 提示用户登录
 			print("没有 token! 需要登录")
 			completion(nil, false)
 			return
@@ -80,8 +81,16 @@ class JRNetworkManager {
 			aMethond = .get
 		}
 
-		/// 成功回调闭包
+		/// 完成回调闭包
 		let completion = { (response: DataResponse<Any>) -> () in
+			
+			/// 检测token 是否过期
+			if response.response?.statusCode == 403 {
+				print("Token 过期了")
+				// FIXME: 发送通知
+				completion(nil, false)
+				return
+			}
 			
 			/// 网络请求判断
 			if response.result.isSuccess {
