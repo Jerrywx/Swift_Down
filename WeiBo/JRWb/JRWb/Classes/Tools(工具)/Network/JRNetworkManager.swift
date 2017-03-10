@@ -19,7 +19,45 @@ class JRNetworkManager {
 	
 	/// 网络单粒
 	static let shared = JRNetworkManager()
+	
+	/// 访问令牌
+	var accessToken: String? = "2.00fxAYtCVXkvuB58b1c81191OUuc7E"
 
+	
+	func tokenRequest(_ url: URLConvertible,
+	                  method: JRNetWorkMethond = .POST,
+	                  parameters: Parameters? = nil,
+	                  encoding: ParameterEncoding = URLEncoding.default,
+	                  headers: HTTPHeaders? = nil,
+	                  completion: @escaping (_ json: AnyObject?, _ isSuccess: Bool) -> ()) {
+		
+		/// 判断token
+		guard let token = accessToken else {
+			print("没有 token! 需要登录")
+			completion(nil, false)
+			return
+		}
+		
+		/// 判断参数
+		var parameters = parameters
+		if parameters == nil {
+			parameters = [String : AnyObject]()
+		}
+		
+		/// 拼接 token
+		parameters!["access_token"] = token
+		
+		/// 网络请求
+		myRequest(url, 
+		          method: method, 
+		          parameters: parameters, 
+		          encoding: encoding, 
+		          headers: headers, 
+		          completion: completion)
+
+	}
+	
+	
 	/// 封装 Alamofire 网络请求方法
 	///
 	/// - Parameters:
@@ -41,8 +79,7 @@ class JRNetworkManager {
 		if method == .GET {
 			aMethond = .get
 		}
-		
-//		Generic parameter 'Value' could not be inferred
+
 		/// 成功回调闭包
 		let completion = { (response: DataResponse<Any>) -> () in
 			

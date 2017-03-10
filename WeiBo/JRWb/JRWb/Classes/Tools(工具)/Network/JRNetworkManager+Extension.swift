@@ -16,10 +16,11 @@ extension JRNetworkManager {
 	/// - Parameter completion: 完成回调 [list:微博字典数组, isSuccess:是否成功]
 	func statusList(completion: @escaping (_ list: [[String : AnyObject]], _ isSuccess: Bool) -> ()) {
 		
+		/// 接口
 		let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
-		let param = ["access_token" : "2.00fxAYtCVXkvuB58b1c81191OUuc7E"]
 		
-		myRequest(urlString, method: .GET, parameters: param) { (json, isSuccess) in
+		/// 网络请求
+		tokenRequest(urlString, method: .GET) { (json, isSuccess) in
 			if isSuccess {
 				print("成功")
 				guard
@@ -27,9 +28,9 @@ extension JRNetworkManager {
 				else {
 					return
 				}
-				
+
 				let result = jsonData["statuses"] as! [[String : AnyObject]]
-				
+
 				completion(result, isSuccess)
 			}
 		}
