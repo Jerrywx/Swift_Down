@@ -21,7 +21,7 @@ class JRNetworkManager {
 	static let shared = JRNetworkManager()
 	
 	/// 访问令牌
-	var accessToken: String? = "2.00fxAYtCVXkvuB58b1c81191OUuc7E22"
+	var accessToken: String? = "2.00fxAYtCVXkvuB58b1c81191OUuc7E"
 
 	
 	func tokenRequest(_ url: URLConvertible,

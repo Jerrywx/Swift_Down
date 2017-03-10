@@ -32,10 +32,22 @@ class JRHomeViewController: JRBaseViewController {
 	/// 加载数据
 	override func loadData() {
 		
-		JRNetworkManager.shared.statusList { (list: [[String : AnyObject]], isSuccess: Bool) in
-			print(list)
+		///
+		let list = JRStatusListViewModel()
+		
+		list.loadStatus { (isSuccess: Bool) in
+			if isSuccess {
+				print("成功: \(list.statusList)")
+			} else {
+				print("失败")
+			}
 		}
 		
+//		JRNetworkManager.shared.statusList { (list: [[String : AnyObject]], isSuccess: Bool) in
+//			print(list)
+//		}
+		
+		/// 菊花
 		DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) { 
 			for i in 0..<5 {
 				self.statusList.insert(i.description, at: 0)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3021BCF91E727BDA009EA64E /* JRStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3021BCF81E727BDA009EA64E /* JRStatus.swift */; };
+		3021BCFB1E727DF9009EA64E /* JRStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3021BCFA1E727DF9009EA64E /* JRStatusListViewModel.swift */; };
 		30ADD4831E4C76A1001012E5 /* JRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ADD4821E4C76A1001012E5 /* JRNetworkManager.swift */; };
 		30E78B161E6D253600AB2639 /* JRNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E78B151E6D253600AB2639 /* JRNetworkManager+Extension.swift */; };
 		70E31FCDAF3BB90B7D04F65E /* Pods_JRWb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF34D3D8029C931DC3F1621 /* Pods_JRWb.framework */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		03860D69E2BB78FC8254DB99 /* Pods-JRWb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRWb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JRWb/Pods-JRWb.debug.xcconfig"; sourceTree = "<group>"; };
 		2BF34D3D8029C931DC3F1621 /* Pods_JRWb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JRWb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3021BCF81E727BDA009EA64E /* JRStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRStatus.swift; sourceTree = "<group>"; };
+		3021BCFA1E727DF9009EA64E /* JRStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRStatusListViewModel.swift; sourceTree = "<group>"; };
 		30ADD4821E4C76A1001012E5 /* JRNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRNetworkManager.swift; sourceTree = "<group>"; };
 		30E78B151E6D253600AB2639 /* JRNetworkManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JRNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		C42A92731E270968003D5B10 /* JRNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRNavigationController.swift; sourceTree = "<group>"; };
@@ -173,9 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				C440731C1E26913C004874AC /* View(视图和控制器) */,
+				C44073221E26913C004874AC /* ViewModel(视图模型) */,
 				C440731A1E26913C004874AC /* Model(模型) */,
 				C440731B1E26913C004874AC /* Tools(工具) */,
-				C44073221E26913C004874AC /* ViewModel(视图模型) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C42A927F1E270AC8003D5B10 /* JRBaseModel.swift */,
+				3021BCF81E727BDA009EA64E /* JRStatus.swift */,
 			);
 			path = "Model(模型)";
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				C42A92831E270AD7003D5B10 /* JRBaseViewModel.swift */,
+				3021BCFA1E727DF9009EA64E /* JRStatusListViewModel.swift */,
 			);
 			path = "ViewModel(视图模型)";
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 				C42A92741E270968003D5B10 /* JRNavigationController.swift in Sources */,
 				C42A927A1E2709B4003D5B10 /* JRMessageViewController.swift in Sources */,
 				C430EFD51E27E029007A4159 /* Bundle-Extensions.swift in Sources */,
+				3021BCF91E727BDA009EA64E /* JRStatus.swift in Sources */,
 				C44073241E269264004874AC /* JRMainViewController.swift in Sources */,
 				30E78B161E6D253600AB2639 /* JRNetworkManager+Extension.swift in Sources */,
 				C42A927E1E2709C3003D5B10 /* JRProfileViewController.swift in Sources */,
@@ -452,6 +459,7 @@
 				C430EFCB1E27D034007A4159 /* NSString+CZPath.m in Sources */,
 				C42A92801E270AC8003D5B10 /* JRBaseModel.swift in Sources */,
 				C430EFC91E27D034007A4159 /* NSString+CZBase64.m in Sources */,
+				3021BCFB1E727DF9009EA64E /* JRStatusListViewModel.swift in Sources */,
 				C430EFC81E27D034007A4159 /* NSObject+CZRuntime.m in Sources */,
 				C437CB751E29B4A4005F8F1F /* JRDemoViewController.swift in Sources */,
 				C430EFC61E27D034007A4159 /* NSArray+Log.m in Sources */,
