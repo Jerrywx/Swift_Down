@@ -17,5 +17,7 @@
         <page name='Deinitialization(析构过程)'/>
         <page name='Error Handling(错误处理)'/>
         <page name='Advanced Operators(高级运算符)'/>
+        <page name='Access Control(访问控制)'/>
+        <page name='Array(数组)'/>
     </pages>
 </playground>

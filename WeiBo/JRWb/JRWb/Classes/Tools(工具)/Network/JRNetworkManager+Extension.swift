@@ -29,9 +29,9 @@ extension JRNetworkManager {
 					return
 				}
 
-				let result = jsonData["statuses"] as! [[String : AnyObject]]
-
-				completion(result, isSuccess)
+//				let result = jsonData["statuses"] as! [[String : AnyObject]]
+//
+//				completion(result, isSuccess)
 			}
 		}
 		

@@ -52,6 +52,24 @@ shopList += ["!!!"]
 shopList[0] = "😄"
 
 
+////
+var emptyArray = Array<Int>()
+var emptyArray2 = [Int]()
+
+emptyArray.append(0)
+
+//// 
+var numbers = [10, 20 , 30, 40, 50]
+
+numbers.count
+numbers.capacity
+
+numbers.append(100)
+
+numbers.count
+numbers.capacity
+
+
 
 
 //: [Next](@next)
